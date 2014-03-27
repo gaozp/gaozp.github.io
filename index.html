@@ -1,18 +1,27 @@
-﻿---
-layout: default
-title: 我的Blog
----
-
-<h2>{{ page.title }}</h2>
-
-<p>最新文章</p>
-
-<ul>
-
-	{% for post in site.posts %}
-
-		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-
-	{% endfor %}
-
-</ul>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1265.19">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    span.s1 {font: 12.0px 'Heiti SC Light'}
+  </style>
+</head>
+<body>
+<p class="p1">---</p>
+<p class="p1">layout: default</p>
+<p class="p1">title: <span class="s1">我得</span>Blog</p>
+<p class="p1">---</p>
+<p class="p1">&lt;h2&gt;{{ page.title }}&lt;/h2&gt;</p>
+<p class="p1">&lt;p&gt;<span class="s1">最新文章</span>&lt;/p&gt;</p>
+<p class="p1">&lt;ul&gt;</p>
+<p class="p1">{% for post in site.posts %}</p>
+<p class="p1">&lt;li&gt;{{ post.data | date_to_string<span class="Apple-converted-space">  </span>}} &lt;a href=“{{ site.baseurl }}{{ post.url }}”&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1">{% endfor %}</p>
+<p class="p1">&lt;/ul&gt;</p>
+</body>
+</html>
