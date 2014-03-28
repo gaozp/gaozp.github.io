@@ -1,25 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1265.19">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
-    span.s1 {font: 12.0px Helvetica}
-    span.s2 {font: 12.0px 'Songti SC'}
-  </style>
-</head>
-<body>
-<p class="p1">---</p>
-<p class="p1">layout: default</p>
-<p class="p2"><span class="s1">title: </span>hello world<span class="s2">！</span></p>
-<p class="p1">---</p>
-<p class="p1">&lt;h2&gt;{{ page.title }}&lt;/h2&gt;</p>
-<p class="p1">&lt;p&gt;my first page&lt;/p&gt;</p>
-<p class="p1">&lt;p&gt;{{ page.date | date_to_string }}&lt;/p&gt;</p>
-</body>
-</html>
+---
+layout: default
+title: Hello World
+---
+<h2>{{ page.title }}</h2>
+<p>this is my first page</p>
+<p>{{ page.date | date_to_string }}</p>
