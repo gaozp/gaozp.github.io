@@ -1,0 +1,39 @@
+---
+layout: default
+title: 有关于学习AOSP的一些知识
+---
+<h2>{{ page.title }}</h2>
+<p>来到了新的公司，开始了新的旅程。
+	不同于以往的是，之前都是进行app层的开发，而现在是要进行基于手机系统rom级别的开发。
+	首先就是开始学习AOSP，也就是android open source project，具体的网址就是source.android.com
+	
+	
+	1.首先得从第一点开始说起：首先电脑最好是linux的系统，毕竟安卓就是基于linux进行开发的。
+	2.jdk的版本最好是1.6
+	
+	首先就是进行linux环境的搭建，当时我电脑换成了ubuntu14.04之后，也就是简单的删除了openjdk，然后安装了jdk1.6版本，
+	其他的python，还有gnu的版本基本都是正常的。
+	
+	环境搭建好了之后，就是可以进行源代码的下载了。
+	对了，在下载源码的时候，千万不能直接在用户目录下面进行sync，不然的话，整个私人的空间就相当于都被安卓源码占领了。
+	
+	repo init -u https://android.googlesource.com/platform/manifest
+	在进行了repo的安装之后，就可以将android的mainfest进行初始化，其实这个并不是一个mainifest文件，而是一个库，里面维护了整个android源码的
+	工程源码，然后通过
+	repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
+	选择合适的分支进行初始化
+	
+	然后就可以sync源码了，使用repo sync就可以，这个需要一段时间，因为源码的文件是很大的。
+	
+	当源码下载下来了之后就可以进行build了
+	首先自然就是源码的根目录，运行build/envsetup.sh就相当于将源码编译的environment环境配置好了。
+	之后就是可以使用lunch命令，这个时候会让你选择编译哪个版本，当然了，你选择不同的版本自然需要不同的硬件进行支持，而一些驱动的binary文件都是可以在
+	网上进行下载的，因为比如高通之类的驱动什么的自然不是开源的，把这些驱动下载下来之后放到vendor目录下，然后运行lunch选择nexus5的对应的数字，选择eng
+	版本进行编译，user版本就是发布的版本，是不能进行debug的，userdebug是可以进行debug，但是已经进行过代码的优化，所以在断点的时候，会有隔行跳得情况出现。
+	所以编译的都是eng也就是engineer模式。
+	然后就是漫长的编译了。编译完了之后，会在out文件夹下产生出system.img,userdata.img，还有一个img的文件。这三个文件就是编译出来的系统了。
+	在编译的时候也出现过错误，就是当修改了代码之后，javadoc会进行报错，这样的时候可以使用make update-api进行增量编译，编译完了之后就可以把这个系统
+	烧进手机了。我记得我当时就是把系统烧进去了，然后手机就不支持电信了，导致到现在手机还不能进行通话和短信。
+	
+	今天就先把源码的下载和编译说到这里吧，明天说如何用eclipse进行源码的远程断点调试。</p>
+<p>{{ page.date | date_to_string }}</p>
