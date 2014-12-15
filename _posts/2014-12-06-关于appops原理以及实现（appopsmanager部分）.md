@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 关于appops原理以及实现（appopsmanager部分）
 ---
 
