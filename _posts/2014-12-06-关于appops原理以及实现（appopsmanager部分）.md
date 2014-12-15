@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 关于appops原理以及实现（appopsmanager部分）
+category: tec
 ---
 
 ##1.基本技能储备
