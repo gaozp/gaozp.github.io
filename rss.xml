@@ -5,9 +5,9 @@ layout: nil
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>选择一种你自己的生活</title>
-    <link>gaozp.github.io</link>
-    <atom:link href="place_your_blog_url_here/rss.xml" rel="self" type="application/rss+xml" />
-    <description>place_your_blog_description_here</description>
+    <link>http://gaozp.github.io</link>
+    <atom:link href="http://gaozp.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <description>rss的描述</description>
     <language>zh-cn</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
@@ -15,9 +15,9 @@ layout: nil
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title }}</title>
-      <link>place_your_blog_url_here{{ post.url }}</link>
+      <link>http://gaozp.github.io{{ post.url }}</link>
       <pubDate>{{ post.date | date_to_string }}</pubDate>
-      <author>place_your_name_here</author>
+      <author>高志鹏</author>
       <guid>place_your_blog_url_here{{ post.id }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
