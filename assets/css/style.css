@@ -170,7 +170,7 @@ a {
   left: 0;
   bottom: 0; }
   #tags__bottom > .fontello, #tags__bottom > .post__toc-li:before {
-    width: 50%;
+    width: 100%;
     font-size: 18px;
     line-height: 44px;
     text-align: center;
