@@ -1,10 +1,4 @@
 
-/*!--------------------------------*\
-   3-Jekyll Theme
-   @author Peiwen Lu (P233)
-   https://github.com/P233/3-Jekyll
-\*---------------------------------*/
-
 // Detect window size, if less than 1280px add class 'mobile' to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
 if ($(window).width() <= 1280) {
   $('#sidebar').addClass('mobile')
@@ -12,11 +6,11 @@ if ($(window).width() <= 1280) {
 
 // Variables
     tag1       = $('.pl__all'),
-    tag2       = $('.place_your_tag_name_here'),
-    tag3       = $('.place_your_tag_name_here'),
-    tag4       = $('.place_your_tag_name_here'),
-    tag5       = $('.place_your_tag_name_here'),
-    tag6       = $('.place_your_tag_name_here');
+    tag2       = $('.tec'),
+    tag3       = $('.life');
+//    tag4       = $('.place_your_tag_name_here'),
+//    tag5       = $('.place_your_tag_name_here'),
+//    tag6       = $('.place_your_tag_name_here');
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
     content    = $('#pjax'),
@@ -30,7 +24,7 @@ var clickHandler = function(k) {
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
-for (var i = 1; i <= 6; i++) {
+for (var i = 1; i <= 3; i++) {
   $('#js-label' + i).on('click', clickHandler(i));
 }
 
