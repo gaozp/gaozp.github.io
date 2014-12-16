@@ -127,8 +127,8 @@ function afterPjax() {
   // http://jsfiddle.net/dragoncrew/SHGwe/1/
   var ds_loaded = false,
       top = $('#disqus_thread').offset().top;
-      identifier = $('#post__title').data('identifier');
-  window.disqus_shortname = '';
+      identifier = $('#post__title').data('%Y%m%d');
+  window.disqus_shortname = 'gaozhipeng';
   window.disqus_identifier = identifier;
 
   function check() {
