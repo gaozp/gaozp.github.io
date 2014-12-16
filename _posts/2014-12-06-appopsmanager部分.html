@@ -1,0 +1,232 @@
+---
+layout: post
+title: 关于AppOpsManager部分
+category: tec
+---
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>1.基本技能储备</title>
+
+</head>
+<body>
+<h2>1.基本技能储备</h2>
+
+<p>binder通信这个是必须知道的。<br/>
+解释一下appops这个功能：这个功能其实与android的manifest权限管理是完全没有联系的，应该说是完全没有关系的两个模块（当然也不能说完全没有关系，因为在权限检查的时候会先进行manifest的权限检查，再进行appops的权限检查）。</p>
+
+<h2>2.appops如何实现的</h2>
+
+<h3>总结</h3>
+
+<p>其实appops的基本原理就是通过在需要进行权限检查的地方插入固定的权限检查代码，来实现权限拦截的目的</p>
+
+<h3>1.appopsmanager分析</h3>
+
+<h4>1.权限标志位</h4>
+
+<p>appopsmanager就是binder通信中的bp端了，那就先从bp端入手吧。
+appopsmanager.java位置就是在<em>sourcecode/framework/base/core/java/android/app</em></p>
+
+<p>在appopsmanager的开头就定义了不同的权限标志位，如：</p>
+
+<pre><code>/** @hide Access to coarse location information. */
+public static final int OP_COARSE_LOCATION = 0;
+/** @hide Access to fine location information. */
+public static final int OP_FINE_LOCATION = 1;
+</code></pre>
+
+<p>上面就是截取的一部分，OP_COARSE_LOCATION是获取粗略位置的权限,如果需要添加权限可以在对应的最后添加标志位，但是也要记得在使用到权限的地方添加权限检查的方法。</p>
+
+<h4>2.设置权限检查的代码</h4>
+
+<p>在有了权限标志位之后，我们当然是需要在对应的位置添加权限检查的代码，来检查某个应用是否有权限去执行操作。</p>
+
+<pre><code>if (mAppOps.noteOpNoThrow(op, uid, packageName) != AppOpsManager.MODE_ALLOWED) {
+            return false;
+        }
+</code></pre>
+
+<p>这段代码是<em>framework/base/services/core/java/android/server/locationmanagerservice</em>中的一段检查OP_COARSE_LOCATION的代码。其中调用的noteopnothrow方法就是权限检查的方法。<br/>
+权限检查的方法其实分为两种（都在appopsmanager类中）：<br/>
+1.noteop：针对短时间一次性操作，如读取短信或者发送短信等。<br/>
+2.startop：针对长时间操作，如wakelock，以及gps等。<br/>
+当然了，该方法传入的参数也是显而易见的，uid以及packagename。通过这两个参数可以得到设置的权限OP的状态是允许还是拒绝，如果不是允许的话就会返回权限不允许。</p>
+
+<h4>3.设置权限状态</h4>
+
+<p>有了权限检查的部分，那么下面就是要知道如何设置权限了：<br/>
+在appopsmanager中有方法setmode方法</p>
+
+<pre><code>/** @hide */
+public void setMode(int code, int uid, String packageName, int mode) {
+    try {
+        mService.setMode(code, uid, packageName, mode);
+    } catch (RemoteException e) {
+    }
+}
+</code></pre>
+
+<p>参数的含义：<br/>
+code：就是上方对应的op，想设置的某个权限。<br/>
+uid：设置的应用的uid。<br/>
+packagename：包名。<br/>
+mode：当然了，就是对应的mode。<br/>
+mode的话在appopsmanager中是有静态值对应的，有MODE_ALLOW,MODE_ERROR,MODE_IGNORE也就是拒绝了。</p>
+
+<h3>结束语</h3>
+
+<p>那么，现在从权限的开始，也就是添加，到权限的检查，以及权限的设置都已经说完了。但是它们究竟是如何实现的，那其实就需要去看对应的bn端的代码。所以下一篇就是appopsservice的代码解读了。</p>
+</body>
+</html>
