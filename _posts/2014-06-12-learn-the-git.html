@@ -1,22 +1,26 @@
 ---
 layout: post
-title: 学习git的一些东西
+title: 关于AppOpsManager部分
 category: tec
 ---
-<!--<h2>{{ page.title }}</h2>-->
-<p>昨天和今天学习了git的一些操作，先把那天的源码的远程断点调试的东西回顾一下吧。
-上次好像没有说怎么将源码导入到eclipse中
-1.首先选择新建java工程。
-2.在弹出的界面上取消选择use default location选择，选择自己的源码路径
-3.剩下的就是next，finish了。
-然后等一段时间你就可以看到源码已经导入到eclipse中。
-下面说一下如何使用eclipse+ddms进行远程debug
-1.首先你在手机上安装了系统之后，因为系统是eng就是工程模式的情况下刷出来的系统，所以系统软件也是可以在ddms中显示的。当把系统烧进手机之后。
-2.来到源码的目录下，执行 .build/envsetup.sh 执行这段代码的原因就是能够将其中的一些函数以及命令放到path下，这样你就可以使用这些命令了。比如下面的lunch命令
-3.执行lunch nexus5的版本的手机，其实lunch命令的也是配置了一下编译的环境
-4.这个时候就可以打出ddms命令了，这个时候就可以打开了ddms的窗口。
-5.在ddms窗口中，选择file标签，选择options，然后找到port端口。更改为8900，防止其他的软件占用ddms的端口。同时选择ddms中需要进行断点调试的应用程序的进程，比如Settings进程。
-6.回到eclipse中，在需要进行断点的地方打上断点，然后选择run标签，找到debug configuration标签，在打开的窗口中选择remote java application，双击就可以添加一个新的，然后在右边的conect标签里选择端口8900，然后apply，debug。
+<body>
+<p>昨天和今天学习了git的一些操作，先把那天的源码的远程断点调试的东西回顾一下吧。<br/>
+上次好像没有说怎么将源码导入到eclipse中<br/>
+1.首先选择新建java工程。<br/>
+2.在弹出的界面上取消选择use default location选择，选择自己的源码路径。<br/>
+3.剩下的就是next，finish了。<br/>
+然后等一段时间你就可以看到源码已经导入到eclipse中。<br/>
+下面说一下如何使用eclipse+ddms进行远程debug<br/>
+1.首先你在手机上安装了系统之后，因为系统是eng就是工程模式的情况下刷出来的系统，所以系统软件也是可以在ddms中显示的。当把系统烧进手机之后。<br/>
+2.来到源码的目录下，执行 .build/envsetup.sh 执行这段代码的原因就是能够将其中的一些函数以及命令放到path下，这样你就可以使用这些命令了。比如下面的lunch命令。<br/>
+3.执行lunch nexus5的版本的手机，其实lunch命令的也是配置了一下编译的环境。<br/>
+4.这个时候就可以打出ddms命令了，这个时候就可以打开了ddms的窗口。<br/>
+5.在ddms窗口中，选择file标签，选择options，然后找到port端口。更改为8900，防止其他的软件占用ddms的端口。同时选择ddms中需要进行断点调试的应用程序的进程，比如Settings进程。<br/>
+6.回到eclipse中，在需要进行断点的地方打上断点，然后选择run标签，找到debug configuration标签，在打开的窗口中选择remote java application，双击就可以添加一个新的，然后在右边的conect标签里选择端口8900，然后apply，debug。<br/>
 7，回到ddms中，如果看到刚刚的进程之前有了一个绿色的小虫子，恭喜你。ddms+eclipse 成功。</p>
+
 <p>{{ page.date | date_to_string }}</p>
 
+
+
+</body>

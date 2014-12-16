@@ -1,19 +1,21 @@
 ---
 layout: post
-title: 学习android4.2中新添加的appops的相关
+title: 关于AppOpsManager部分
 category: tec
 ---
-<p> 
-今天终于学完了所有的基础的一些东西，然后终于开始给我分配任务了。
-任务的内容自然就是学习appops也就是权限管理相关的知识了。
-appops是google在4.2的时候在系统的框架中加入的新的权限管理的相关。但是说因为还是存在很多的bug之类的问题，后来就隐藏了，但是因为我们是做系统级别的开发的，能够用到google自己原生的东西自然是非常好的。现在appops已经被隐藏了，但是也还是可以通过其他的方式来将其打开的。
+<body>
+<p>今天终于学完了所有的基础的一些东西，然后终于开始给我分配任务了。<br/>
+任务的内容自然就是学习appops也就是权限管理相关的知识了。<br/>
+appops是google在4.2的时候在系统的框架中加入的新的权限管理的相关。但是说因为还是存在很多的bug之类的问题，后来就隐藏了，但是因为我们是做系统级别的开发的，能够用到google自己原生的东西自然是非常好的。现在appops已经被隐藏了，但是也还是可以通过其他的方式来将其打开的。</p>
 
-我就简单说以下appops的具体的操作吧，以后会整理出来具体的文档的。
-appops其实也就是通过binder的方式来进行运行的。
-其实appops也就是有一个appopsservice类运行在内核中，通过appopsmanager类来对appopsservice类来进行处理。在context捏初始化的时候，就已经将appopsservice注册了该服务，而且还返回了该服务的binder对象，来供给appopsmanager来进行使用。
+<p>我就简单说以下appops的具体的操作吧，以后会整理出来具体的文档的。<br/>
+appops其实也就是通过binder的方式来进行运行的。<br/>
+其实appops也就是有一个appopsservice类运行在内核中，通过appopsmanager类来对appopsservice类来进行处理。在context捏初始化的时候，就已经将appopsservice注册了该服务，而且还返回了该服务的binder对象，来供给appopsmanager来进行使用。</p>
 
-还是从浅入深吧，比如现在界面上我能够看到所有的权限信息，以及能够操作所有的权限，那么，这些信息是哪儿来的呢，这些信息的获取都是通过appopsmanager类来进行获取的，manager中还有对权限进行操作的setmode方法，以及通过包名获取某个权限的方法。但是，manager中调用这些方法其实都是调用其中封装的service来进行操作的，也就是appopsservice这个类了。
+<p>还是从浅入深吧，比如现在界面上我能够看到所有的权限信息，以及能够操作所有的权限，那么，这些信息是哪儿来的呢，这些信息的获取都是通过appopsmanager类来进行获取的，manager中还有对权限进行操作的setmode方法，以及通过包名获取某个权限的方法。但是，manager中调用这些方法其实都是调用其中封装的service来进行操作的，也就是appopsservice这个类了。</p>
 
-我再去多学学再来讲巴。
-</p>
+<p>我再去多学学再来讲吧。</p>
+
 <p>{{ page.date | date_to_string }}</p>
+
+</body>

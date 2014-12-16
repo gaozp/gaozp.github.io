@@ -1,34 +1,36 @@
 ---
 layout: post
-title: 学习repo等等东西
+title: 关于AppOpsManager部分
 category: tec
 ---
-<!--<h2>{{ page.title }}</h2>-->
-<p>
-上面说到了eclipse+ddms远程进行调试的过程。
-下面说一说如何将本地的项目导入到系统的项目中去。
-比如你本地有一个叫helloworld的安卓工程，需要导入到系统中，成为系统的内置应用。
-1.首先需要将这个应用在工程下面调试通过了之后
-2.将整个项目导入到源码目录下得packages/apps/目录下面
-3.在工程目录下添加android.mk文件，记得修改local_packagename属性为自己的工程名字
-4.执行. build/envsetup.sh
-5.执行lunch nexus5的版本号
-6.在packages/apps目录下执行 mmm 工程名的命令。进行了打包，在打包的过程中，会有提示你打的包在什么地方，一般都是在out/target/xxx/system/app文件夹下，当然了，不同的android.mk文件会在不同的目录下得。
-7.在得到apk文件之后，可以使用 make snod命令重新将system/apps下面的apk打包到system.img中，但是，这样的话，就需要重新刷机才能看到apk安装在手机上。
-8.所以这个时候，一般都是使用adb push 到system/app中，这样就完成了随时的一个安装。
-本地项目导入到系统项目的操作大概就是这样。
-下面是与安卓源码开发息息相关的git以及repo的使用
-git是分布式的管理，这里就不再赘述关于git的基础教程了，最好是看一下在百度里搜索pro git的中文教程，真的是非常的好。
-我这里就说一下repo的用法以及平时工作中需要用到的基本的操作吧。
-1.首先repo是集中管理多个git工程的。
-2.（假设已经把源码都已经download下来了，进行了开发的操作）
-3.首先来到package/apps/目录下，使用repo start xxx来开启一个xxx的分支，当然了，这一步其实是包含了git branch xxx，和git checkout xxx 的两步操作，这样你就已经在一个新的xxx分支上了，这样你就可以进行代码的增删改查的一系列的操作了。
-4.在你代码修改完了之后，你需要git add . 一下，然后再commit一下。这样你的代码就到了本地的仓库中了。
-5.在提交之前，也必须进行repo sync 的操作，这样的话；就能够拉取到服务器端的最新的代码，然后进行有冲突改冲突，没有冲突就算了。
-6.最后进行repo upload操作。将代码提交到服务器。
-7.代码会在leader进行review，review通过了之后，会进行代码的merge工作。
-8.在代码进行了merge之后，那么你现在所在的xxx分支就已经没用了。但是你目前只有这么一个分支，是不能进行git branch -d 进行删除操作的。所以只能进行repo prune操作。该操作会自动将所有已经merge的分支进行删除。
 
-行吧。今天就先写到这儿吧。
-</p>
+<body>
+<p>上面说到了eclipse+ddms远程进行调试的过程。<br/>
+下面说一说如何将本地的项目导入到系统的项目中去。<br/>
+比如你本地有一个叫helloworld的安卓工程，需要导入到系统中，成为系统的内置应用。<br/>
+1.首先需要将这个应用在工程下面调试通过了之后。<br/>
+2.将整个项目导入到源码目录下得packages/apps/目录下面。<br/>
+3.在工程目录下添加android.mk文件，记得修改local_packagename属性为自己的工程名字。<br/>
+4.执行. build/envsetup.sh。<br/>
+5.执行lunch nexus5的版本号。<br/>
+6.在packages/apps目录下执行 mmm 工程名的命令。进行了打包，在打包的过程中，会有提示你打的包在什么地方，一般都是在out/target/xxx/system/app文件夹下，当然了，不同的android.mk文件会在不同的目录下得。<br/>
+7.在得到apk文件之后，可以使用 make snod命令重新将system/apps下面的apk打包到system.img中，但是，这样的话，就需要重新刷机才能看到apk安装在手机上。<br/>
+8.所以这个时候，一般都是使用adb push 到system/app中，这样就完成了随时的一个安装。<br/>
+本地项目导入到系统项目的操作大概就是这样。<br/>
+下面是与安卓源码开发息息相关的git以及repo的使用。<br/>
+git是分布式的管理，这里就不再赘述关于git的基础教程了，最好是看一下在百度里搜索pro git的中文教程，真的是非常的好。<br/>
+我这里就说一下repo的用法以及平时工作中需要用到的基本的操作吧。<br/>
+1.首先repo是集中管理多个git工程的。<br/>
+2.（假设已经把源码都已经download下来了，进行了开发的操作）<br/>
+3.首先来到package/apps/目录下，使用repo start xxx来开启一个xxx的分支，当然了，这一步其实是包含了git branch xxx，和git checkout xxx 的两步操作，这样你就已经在一个新的xxx分支上了，这样你就可以进行代码的增删改查的一系列的操作了。<br/>
+4.在你代码修改完了之后，你需要git add . 一下，然后再commit一下。这样你的代码就到了本地的仓库中了。<br/>
+5.在提交之前，也必须进行repo sync 的操作，这样的话；就能够拉取到服务器端的最新的代码，然后进行有冲突改冲突，没有冲突就算了。<br/>
+6.最后进行repo upload操作。将代码提交到服务器。<br/>
+7.代码会在leader进行review，review通过了之后，会进行代码的merge工作。<br/>
+8.在代码进行了merge之后，那么你现在所在的xxx分支就已经没用了。但是你目前只有这么一个分支，是不能进行git branch -d 进行删除操作的。所以只能进行repo prune操作。该操作会自动将所有已经merge的分支进行删除。</p>
+
+<p>行吧。今天就先写到这儿吧。</p>
+
 <p>{{ page.date | date_to_string }}</p>
+
+</body>
