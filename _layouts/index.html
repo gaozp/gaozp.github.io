@@ -30,6 +30,7 @@
       </nav> <!-- end #tags -->
 
       <div id="posts-list">
+	<form action="" id="search-form">
 	<script>
   (function() {
     var cx = '007409411121209144976:pfdjmbixdpq';
@@ -43,6 +44,7 @@
   })();
 </script>
 <gcse:search></gcse:search>
+	</form>
         <nav id="pl__container">
         {% for post in site.posts %}
           <a class="{{ post.categories }} pl__all" href="{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%b %Y" }}</span></a>
