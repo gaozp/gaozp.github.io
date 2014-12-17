@@ -280,7 +280,7 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
-  top: 48px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: -1px;
