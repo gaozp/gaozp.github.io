@@ -1,0 +1,21 @@
+---
+layout: post
+title: 从搭vps到搭建自己的shadowsock翻墙梯子
+category: tec
+---
+
+
+<body>
+<p>
+和谐天朝自然网络也是和谐的，大家生活在一个大局域网中，犹记得前1个月的时候，有关部门忽然说是要整顿翻墙工具，一夜之间，鬼哭狼嚎，shadowsocks，各种vpn都没用了，但是没过多久，这些工具又可以继续使用了。仿佛国家在警告我们：别以为你们那点小把戏可以欺骗我，哥只是不想治你们而已。<br/>
+话说扯淡也就扯到这里了，作为一个Android开发者，如果不会翻墙，那google的很多的原生的资料都无法查看了，所以翻墙应该是一个码农必备的技能吧。我这边就说我正在使用的方式吧。<br/>
+首先你需要买一个<a href="http://baike.baidu.com/link?url=FURBDZXbrp7Q_Wps9t3FjN5zxUQixYmKkxVW8nNoPD56slD0HjKKFgL-adYbnNDQLcOaqwDhaiPa3d12LGK6_q">vps</a>,vps种类很多，但是好的vps的话也就是linode还有一个digitalocean,之前公司里有人用的是linode，速度还是很快的，最好选择的服务器是日本或者韩国这些国家的，这样的话，对国内翻墙的网速会快速很多。digitalocean完全没有用过，也就不多做评价了。<br/>
+至于我自己则是用的最便宜的搬瓦工，4美元一年的最基本款，但是作为shadowsocks来用已经完全够用了。<br/>
+首先去到搬瓦工的官网上去购买对应的产品，选择适合自己的服务器套餐吧。<br/>
+在购买完成后，进入到后台控制器，这里是不是还需要截个图，在后台控制页面，就可以一键重新装系统什么的，首先需要做的就是将系统装成ubuntu或者其他的linux系统，因为一般服务器都是linux系统嘛。装完之后，就可以到网上找一个<a href="http://teddysun.com/342.html">一键shadowsocks的教程</a>话说我当时就是用的这个人的教程，配置好shadowsocks，然后在远程服务器上打开这个shadowsocks服务就可以了。<br/>
+这里插一句：最好的使用方式就是使用ssh远程登录去进行相关的配置，如果你在网页端的控制台里面进行设置的话，会非常的卡，如果你使用ssh远程登录的话，那样就可以节省很多的时间啦，至于如何使用ssh远程登录，以后我会慢慢写起来的。<br/>
+到了这里，其实服务器端已经搭建好了，那么客户端再搭建一下，那么就可以翻墙啦，不同平台是有不同平台的客户端的搭建方法的。<br/>
+<strong>1.Linux搭建：首先安装shadowsocks的客户端，至于sudo apt-get install *****什么的就不说了，安装好了之后，在用户的根目录下创建一个shadow.json或者其他名字什么的都可以，然后在这个文件里面填上对应的服务器配置，就可以使用了。使用方法就是sslocal -c shadow.json 这样就可以在该terminal里面打开了，当你本地通过设置好的端口去连接的时候，就会翻墙啦。</strong><br/>
+<strong>2.当然是我们的大mac了，mac不亏是人用了脑子都会变笨的系统，只要在官网下载对应的shadowsocksapp，配置一下ip，端口和密码。这样就可以全局翻墙了。</strong><br/>
+<strong>3.windows没在winndows上用过shadowsocks，应该还是有办法的，就直接略过吧。</strong></p>
+</body>
