@@ -1,0 +1,57 @@
+---
+layout: post
+title: java读写锁以及官方示例讲解
+category: tec
+---
+
+
+
+<body>
+<p>最新工作中需要将synchonized同步锁修改成读写锁，于是对读写锁进行了研究。</p>
+
+<p>读写锁解决的需求就是同时并发请求多，但是读取请求明显大于写入的请求，这样如果使用synchonized锁去锁住整个的就会让效率下降很多。</p>
+
+<p>说一下java中的ReentrantReadWriteLock的读锁与写锁竞争条件吧：<br/>
+读锁是排写锁操作的，读锁不排读锁操作，多个读锁可以并发不阻塞。在读锁获取和读锁释放之前，写锁并不能被任何线程获取。多个读锁同时作用期间，试图获取写锁的线程都处于等待状态，当最后一个读锁释放后，试图获取写锁的线程才有机会获取写锁。<br/>
+写锁是排写锁，排读锁操作的。当一个线程获取到写锁之后，其他试图获取写锁和试图获取读锁的线程都处于等待状态，直到写锁被释放。<br/>
+<strong>同时，写锁中是可以获取读锁，但是读锁中是无法获取写锁的。</strong></p>
+
+<p>下面的是java的ReentrantReadWriteLock官方示例，来解读一下吧。</p>
+
+<pre><code>class CachedData {
+    Object data;
+volatile boolean cacheValid;
+final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
+
+void processCachedData() {
+  rwl.readLock().lock();// @1
+  if (!cacheValid) {
+    // Must release read lock before acquiring write lock
+    rwl.readLock().unlock(); // @3
+    rwl.writeLock().lock(); // @2
+    try {
+      // Recheck state because another thread might have
+      // acquired write lock and changed state before we did.
+      if (!cacheValid) {
+        data = ...
+        cacheValid = true;
+      }
+      // Downgrade by acquiring read lock before releasing write lock
+      rwl.readLock().lock(); //@4
+    } finally {
+      rwl.writeLock().unlock(); // Unlock write, still hold read @5
+    }
+  }
+
+  try {
+    use(data);
+  } finally {
+    rwl.readLock().unlock(); // 6
+  }
+}
+</code></pre>
+
+<p>当ABC三个线程同时进入到processcachedData()方法，同时都会得到读锁，然后获取cachevalid，然后走到3位置释放读锁，同时，假设A线程获取到写锁，所以BC线程就无法获取到写锁，这个时候进来的D线程就会停留在1位置而无法获取读锁。A线程继续往下走，判断到cachevalid还是false，就会继续走下去。为什么这个地方会还有一次判断，上面注释很清楚，A线程写完之后，BC线程获取到写锁，如果不再次进行判断，就会写入新的数据了，就不再是同步锁了。所以这个地方有一个新的判断。回到A线程，A线程继续进行操作，到达4之后，获取到读锁，这个地方api官方解释就是，写锁要释放的时候，必须先降级成读锁，这样其他在等待写锁的比如BC，就不会获取到写锁了。然后释放写锁，这就是写锁的降级，释放写锁之后，因为还持有读锁，所以BC线程无法获取到写锁，只有在A线程执行到6的时候，BC线程才会拿到写锁，进行判断，就会发现数据已经有了，释放写锁，释放读锁。</p>
+
+<p>读写锁能够有效的在读操作明显大于写操作的需求中完成高效率的运转。</p>
+</body>
