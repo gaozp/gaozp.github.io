@@ -1,0 +1,49 @@
+---
+layout: post
+title: netd学习记录(一)main函数解析
+category: tec
+---
+<body>
+<p>netd的代码结构整理<br/>
+netd的代码在sourcecode/system/netd目录下，<br/>
+而相关的lib在sourcecode/system/core/libsysutils/src下，<br/>
+framework相关的在sourcecode/frameworks/base/services/java/com/andrid/server/NetworkManagementService.java以及sourcecode/frameworks/base/services/java/com/android/server/NativeDaemonConnector.java中。</p>
+
+<p>netd的源码分析吧：<br/>
+main.cpp</p>
+
+<pre><code>int main(){
+    if (!(nm = NetlinkManager::Instance())) {
+        ALOGE("Unable to create NetlinkManager");
+        exit(1);
+    };
+
+    cl = new CommandListener();
+    nm-&gt;setBroadcaster((SocketListener *) cl);
+
+    if (nm-&gt;start()) {
+        ALOGE("Unable to start NetlinkManager (%s)", strerror(errno));
+        exit(1);
+    }
+
+    ....
+
+    if (cl-&gt;startListener()) {
+        ALOGE("Unable to start CommandListener (%s)", strerror(errno));
+        exit(1);
+    }
+}
+</code></pre>
+
+<p>netd的main函数就是做了如下工作：<br/>
+1.创建netlinkmanager<br/>
+2.创建commandlistener<br/>
+3.同时netlinkmanager将自身的boradcaster设置为commandlistener<br/>
+4.netlinkmanager进行start操作<br/>
+5.commandlistener进行startlistener</p>
+
+<p>netlinkmanager是用来静听kernel上发的状态，通过commandlistener来向framework层报告。<br/>
+commandlistener就是用来接受framework的命令，处理之后返回给framework的。</p>
+
+<p><img src="/assets/img/avatar.png" alt="haha" />试试图片呢</p>
+</body>
