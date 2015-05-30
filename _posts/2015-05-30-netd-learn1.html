@@ -1,0 +1,31 @@
+---
+layout: post
+title: netd学习记录(一)
+category: tec
+---
+
+<body>
+<p>最近在学习网络部分，其实android网络部分的内容并不是特别多，但是对基础知识的要求比较多，比如tcpip协议了，比如kernel内部网络流量如何统计了，也就不说这么多了，主要把最近看的netd的相关东西记录下来，梳理一遍。</p>
+
+<p>之前前面有写过java部分的networkmanagementservice以及nativedaemonconnector的功能，也仅仅是写的java层需要修改网络策略的时候如何向下层发送的过程。也就仅仅写到了把cmd拼接出来，通过localsocket发送出去。那么通过这些时间的学习，把最近学到的东西也梳理一遍吧。</p>
+
+<p>netd是用来连接内核态和用户态的中间层，之前我们说的networkmanagementservice就是属于用户态，通过netd的中间层，向linux的kernel的内核态发送对应指令。</p>
+
+<p>netd就是network daemon的缩写，表示network的守护进程，当然了，vold和rild也是相同的结构。netd主要负责一些网络相关的配置，操作，管理，查询功能的实现。<br/>
+netd是系统级别的守护进程，在init.rc中有如下代码</p>
+
+<pre><code>service netd /system/bin/netd
+class main
+socket netd stream 0660 root system
+socket dnsproxyd stream 0660 root inet
+socket mdns stream 0660 root system
+socket fwmarkd stream 0660 root inet
+</code></pre>
+
+<p>可以看到，在linux内核启动完成之后，init进程会读取jnit.rc配置文件，至于这个init进程就不多说了，和本文关系不大哈，可以看到，在配置文件中，开启了4个socket，一个就是netd，权限是0600，用户组是root system，还有就是dnsproxyd以及mdns和fwmarkd3个socket。<br/>
+framework层中德networkmanagementservice和nsdservices将分别和netd以及mdns监听socket建立连接并交互。</p>
+
+<p>当然，android也提供了ndc工具来帮助开发者管理和调试，通过adb命令就可以使用commandlistener中定义的各种命令，就相当于nativedaemonconnector为上层提供接口一样。</p>
+
+<p>使用方式就是 adb shell ned xxxxxx.</p>
+</body>
