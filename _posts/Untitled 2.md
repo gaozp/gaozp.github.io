@@ -1,2 +1,0 @@
-在datausagesummary界面上点击某个应用的限制流量之后  
-调用了policymanagerservice:setuidpolicy方法后面就会调用到
