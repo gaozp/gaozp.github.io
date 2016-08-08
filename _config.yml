@@ -1,2 +1,2 @@
 pygments: true
-markdown: maruku
+markdown: kramdown
