@@ -1,5 +1,5 @@
 ---
-layout:  page
+layout: page
 title: 归档
 description: 归档
 ---
