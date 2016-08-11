@@ -4,4 +4,6 @@ permalink:        /posts/:title/
 
 title:            "Gaozhipeng's Blog"    
 description:      "选择一种你自己的生活"
-author.key:       gaozp
+author:
+    name:      gaozp 
+    key:       gaozp
