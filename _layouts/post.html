@@ -38,17 +38,15 @@
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
   <script type='text/javascript'>
-    window.exports = { 
-        activate : function () {
-            $("pre").addClass("prettyprint linenums");
-            prettyPrint();
-        }
-    }
+    $(document).ready(function(){ 
+        $("pre,code").addClass("prettyprint linenums");
+        prettyPrint();
+    });
   </script>
   <link href="/style/code_prettify/prettify.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="/style/code_prettify/prettify.js"></script>
 </head>
-<body onload="prettyPrint()">
+<body >
 
 
 <article id="main" itemscope itemtype="http://schema.org/Article">
