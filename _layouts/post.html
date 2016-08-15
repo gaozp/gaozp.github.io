@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <!-- <html> -->
-<head>
+<head onload="prettyPrint()">
   <title>{{ page.title }}|{{ site.title }}</title>
   {% include header.html %}
   <script type="text/javascript">
@@ -37,6 +37,8 @@
   <meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
+  <link href="/style/code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="/style/code-prettify/prettify.js"></script>
 </head>
 <body>
 
