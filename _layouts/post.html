@@ -37,6 +37,14 @@
   <meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
+  <script type='text/javascript'>
+    window.exports = { 
+        activate : function (a,b,c) {
+            $("pre").addClass("prettyprint linenums");
+            PR.prettyPrint();
+        }
+    }
+  </script>
   <link href="/style/code_prettify/prettify.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="/style/code_prettify/prettify.js"></script>
 </head>
