@@ -1,0 +1,30 @@
+---
+layout: post
+title: FIZZBUZZ
+category: leetcode
+---
+####question:  
+Write a program that outputs the string representation of numbers from 1 to n.
+
+But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+####submission:  
+
+    public List<String> fizzBuzz(int n) {
+        List<String> result = new ArrayList<>();
+        for(int i = 1;i<=n;i++){
+            int a = i%3;
+            int b = i%5;
+            if(a==0&&b==0)
+                result.add("FizzBuzz");
+            else if(a==0)
+                result.add("Fizz");
+            else if(b==0)
+                result.add("Buzz");
+            else
+                result.add(i+"");
+        }
+        return result;
+    }
+
+####explain:  
+其实也没有什么好说的，无非就是分情况讨论结果，然后添加就可以了。
