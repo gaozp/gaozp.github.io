@@ -87,3 +87,14 @@ adb sideload Lineage*.zip
 
 重新sync代码，更新了以上的两个驱动库之后，编译完成可以启动。
 
+
+
+
+
+#### 后续的工作：
+
+[Jira](https://jira.lineageos.org/projects/BUGBASH/issues/BUGBASH-107?filter=allopenissues) 可以查看当前已有的bug，可以进行验证或者提供log。当然也可以提交代码。
+
+[gerrit](https://review.lineageos.org/#/q/status:open) 代码review的相关，gerrit设置什么的就不多说了。
+
+[reviewer](http://wiki.lineageos.org/contributors.html) 提交代码后可以让这些人帮忙review。
