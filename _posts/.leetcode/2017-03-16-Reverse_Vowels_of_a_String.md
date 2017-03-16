@@ -28,6 +28,10 @@ The vowels does not include the letter "y".
 
 其实就是使用了快速排序的思想。
 
+
+
+虽然这个是个ac的解决办法，但是最后还是发现，用array进行操作的话，反而是最快的，因为array的数据结构查找是最快的。
+
 #### SOLUTION:
 
 ```java
@@ -55,6 +59,44 @@ public class Solution {
             low++;high--;
         }
         return new String(chars);
+    }
+}
+
+
+public class Solution {
+    public String reverseVowels(String s) {
+        char[] chars = s.toCharArray();
+        int low = 0;
+        int high = chars.length - 1;
+        while(low<=high){
+            char tmp = ' ';
+            while (!vowels[chars[low]] && low < high)
+                low++;
+
+            tmp = chars[low];
+            while (!vowels[chars[high]] && low < high)
+                high--;
+
+            chars[low] = chars[high];
+            chars[high] = tmp;
+            low++;
+            high--;
+        }
+        return new String(chars);
+    }
+    
+    static boolean[] vowels = new boolean[256];
+    static {
+        vowels['a'] = true;
+        vowels['e'] = true;
+        vowels['i'] = true;
+        vowels['o'] = true;
+        vowels['u'] = true;
+        vowels['A'] = true;
+        vowels['E'] = true;
+        vowels['I'] = true;
+        vowels['O'] = true;
+        vowels['U'] = true;
     }
 }
 ```
