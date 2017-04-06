@@ -59,3 +59,30 @@ public class Solution {
 }
 ```
 
+```c#
+public static string ReverseStr(string s, int k) {
+			Char[] chars = s.ToCharArray();
+			bool shouldReverse = false;
+			for (int i = 0; i < chars.Length; i += k) {
+				shouldReverse = !shouldReverse;
+				if (!shouldReverse)
+					continue;
+				ReverseStrHelper (chars, i, i + k - 1);
+			}
+			return new string (chars);
+		}
+
+		public static void ReverseStrHelper(Char[] chars,int a,int b){
+			if(b>chars.Length-1) b = chars.Length-1;
+			while (a < b) {
+				Switch (chars, a, b);
+				a++;b--;
+			}
+		}
+		public static void Switch(Char[] chars,int a,int b){
+			Char tmp = chars[a];
+			chars [a] = chars [b];
+			chars [b] = tmp;
+		}
+```
+
