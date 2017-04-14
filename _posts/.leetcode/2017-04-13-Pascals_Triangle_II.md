@@ -19,6 +19,8 @@ Could you optimize your algorithm to use only *O*(*k*) extra space?
 
 但是比较不爽的一点就是s会超过int的最大值，所以需要使用double类型，最后再进行强转。
 
+是根据公式 C(n, k) = n! / (k!\*(n-k)!) 推导出来的，第n行的第k个数这样计算就可以得到。
+
 #### SOLUTION:
 
 ```java
