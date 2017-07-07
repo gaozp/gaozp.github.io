@@ -66,13 +66,7 @@ public class Solution {
     int count = 0;
     public ArrayList<Integer> countArrangementList = new ArrayList<>();
     public int countArrangement(int N) {
-        for(int i = 1;i<=N;i++){
-            countArrangementList.clear();
-            if(isValid(1,i)){
-                countArrangementList.add(i);
-                countArrangementHelper(N,2);
-            }
-        }
+        countArrangementHelper(N,2);
         return count;
     }
     public void countArrangementHelper(int N,int index){
