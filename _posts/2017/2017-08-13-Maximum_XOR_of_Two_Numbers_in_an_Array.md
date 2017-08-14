@@ -43,5 +43,41 @@ public class Solution {
         return result;
     }
 }
+
+    static class Trie{
+        Trie[] child;
+        public Trie(){
+            child = new Trie[2];
+        }
+    }
+
+    public static  int findMaximumXOR(int[] nums) {
+        Trie root = new Trie();
+        for(int num:nums){
+            Trie node = root;
+            for(int i =31;i>=0;i--){
+                int curVal = (num >>> i) &1;
+                if(node.child[curVal]==null) node.child[curVal] = new Trie();
+                node = node.child[curVal];
+            }
+        }
+        int max = Integer.MIN_VALUE;
+        for(int num:nums){
+            Trie node = root;
+            int curSum = 0;
+            for(int i =31;i>=0;i--){
+                int curVal = (num>>>i) &1;
+                if(node.child[curVal^1]!=null){//注意此处的 index ^ curval = 1是最好的情况，这样就有位置标记了。所以index = curval^1;
+                    curSum += (1<<i);
+                    node = node.child[curVal^1];
+                }else{
+                    node = node.child[curVal];
+                }
+            }
+            max = Math.max(max,curSum);
+        }
+        return max;
+
+    }
 ```
 
