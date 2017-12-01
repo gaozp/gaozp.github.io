@@ -60,3 +60,29 @@ class Solution {
 }
 ```
 
+```python
+class Solution(object):
+    def selfDividingNumbers(self, left, right):
+        """
+        :type left: int
+        :type right: int
+        :rtype: List[int]
+        """
+        result = []
+        for i in range(left,right+1,1):
+            tmp = i
+            flag = 0
+            for j in range(0,len(str(tmp))):
+                index =  str(tmp)[j]
+                if int(index) == 0 :
+                    flag = 1
+                    break
+                if tmp%int(index) != 0 :
+                    flag = 1
+                    break
+            if(flag==0):
+                result.append(i)
+        return result
+  
+```
+
