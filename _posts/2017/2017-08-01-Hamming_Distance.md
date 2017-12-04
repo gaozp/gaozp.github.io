@@ -71,3 +71,36 @@ public class Solution {
 }
 ```
 
+
+
+```python
+class Solution(object):
+    def hammingDistance(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        stra = str(bin(x))
+        strb = str(bin(y))
+        indexa = len(stra)
+        indexb = len(strb)
+        i = indexa-1
+        j=indexb-1
+        result = 0
+        while(i>1 or j>1):
+            chara = '0'
+            charb = '0'
+            if(i>1) :chara = stra[i]
+            if(j>1) :charb = strb[j]
+            if(chara != charb) :
+                result+=1
+            i-=1
+            j-=1
+        return result
+    
+    '''当然还有一行的解法'''
+    def hammingDistance(self,x,y):
+        return bin(x^y).conut('1')
+```
+
