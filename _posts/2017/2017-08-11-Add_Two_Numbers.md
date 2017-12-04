@@ -44,3 +44,42 @@ public class Solution {
 }
 ```
 
+```python
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        if l1==None and l2==None : return None
+        result = ListNode(0)
+        carry = 0
+        if(l1!=None or l2!=None):
+            if l1==None :
+                result.val = l2.val
+            elif l2==None :
+                result.val = l1.val
+            else :
+                result.val = (l1.val+l2.val + carry ) % 10
+                carry = (l1.val+l2.val+ carry)/10
+        head = result
+        while(l1.next!=None or l2.next!=None):
+            if (l1.next != None or l2.next != None):
+                result.next = ListNode(0)
+                if l1.next == None:
+                    result.next.val = (l2.next.val +carry) %10
+                    carry = (l2.next.val+carry)/10
+                elif l2.next == None:
+                    result.next.val = (l1.next.val + carry) %10
+                    carry = (l1.next.val+carry)/10
+                else:
+                    result.next.val = (l1.next.val + l2.next.val + carry) % 10
+                    carry = (l1.next.val + l2.next.val + carry) / 10
+                if l1.next != None: l1 = l1.next
+                if l2.next != None: l2 = l2.next
+                result = result.next
+        if carry!=0 : result.next = ListNode(1)
+        return head
+```
+
