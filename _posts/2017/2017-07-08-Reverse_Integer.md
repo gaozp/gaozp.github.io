@@ -47,3 +47,23 @@ public class Solution {
 }
 ```
 
+```python
+class Solution(object):
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if(len(str(x))==1) : return x
+        reverse = ""
+        flag = True if x>0 else False
+        index = 0 if flag else 1
+        for i in range(index ,len(str(x)),1):
+            reverse = str(x)[i]+reverse
+        result = long(reverse) if flag else -long(reverse)
+        if result > 2147483647 or result < -2147483648 :
+            return 0
+        return int(result)
+
+```
+
