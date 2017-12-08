@@ -48,3 +48,21 @@ class Solution {
 }
 ```
 
+```python
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        tmp = ""
+        result = 0
+        for i in range(0,len(s),):
+            index = tmp.find(s[i])
+            tmp = tmp+s[i]
+            if index != -1 :
+                tmp = tmp[index+1:]
+            result = max(result,len(tmp))
+        return result
+```
+
