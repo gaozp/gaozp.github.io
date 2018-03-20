@@ -51,16 +51,14 @@ class Solution {
         return result;
     }
     public void letterCombinationsHelper(String subString,char[] chars,List<String> result,int start){
-        if(subString.length()==chars.length){
+        if (subString.length() == chars.length) {
             result.add(subString);
-        }else{
-            for(int i = start;i<chars.length;i++){//这个地方是需要改进的。
-                int tmp = Integer.parseInt(chars[i]+"");
-                for(int j = 0;j<im[tmp].length;j++){
-                    subString+=im[tmp][j];
-                    letterCombinationsHelper(subString,chars,result,i+1);
-                    subString = subString.substring(0,subString.length()-1);
-                }
+        } else {
+            int tmp = Integer.parseInt(chars[start] + "");
+            for (int j = 0; j < im[tmp].length; j++) {
+                subString += im[tmp][j];
+                letterCombinationsHelper(subString, chars, result, start + 1);
+                subString = subString.substring(0, subString.length() - 1);
             }
         }
     }
