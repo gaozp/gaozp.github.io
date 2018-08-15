@@ -1,5 +1,5 @@
 ---
-layout： post
+layout: post
 title: 648. Replace Words
 ---
 

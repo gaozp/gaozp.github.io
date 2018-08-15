@@ -1,6 +1,6 @@
 ---
-layout:post
-title:357. Count Numbers with Unique Digits
+layout: post
+title: 357. Count Numbers with Unique Digits
 ---
 
 #### QUESTION:

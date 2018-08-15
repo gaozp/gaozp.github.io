@@ -1,6 +1,6 @@
 ---
-layout： post
-title: 8. String to Integer (atoi)
+layout: post
+title: 8.String to Integer (atoi)
 ---
 
 #### QUESTION:
