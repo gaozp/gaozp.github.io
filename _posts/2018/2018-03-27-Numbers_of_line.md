@@ -1,6 +1,6 @@
 ---
-layout:post
-title:806. Number of Lines To Write String
+layout: post
+title: 806. Number of Lines To Write String
 ---
 
 #### QUESTION:

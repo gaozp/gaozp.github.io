@@ -1,5 +1,5 @@
 ---
-layout： post
+layout: post
 title: 38. Count and Say
 ---
 

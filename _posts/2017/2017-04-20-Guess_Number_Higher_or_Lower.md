@@ -1,5 +1,5 @@
 ---
-layou: post
+layout: post
 title: 374. Guess Number Higher or Lower
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: post
-
-title:551. Student Attendance Record I
+title: 551. Student Attendance Record I
 ---
 
 #### QUESTION:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:503. Next Greater Element II
+title: 503. Next Greater Element II
 ---
 
 #### QUESTION:

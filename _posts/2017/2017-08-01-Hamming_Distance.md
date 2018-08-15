@@ -1,6 +1,6 @@
 ---
 layout: post
-title:461. Hamming Distance
+title: 461. Hamming Distance
 ---
 
 #### QUESTION:

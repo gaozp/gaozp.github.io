@@ -1,6 +1,6 @@
 ---
-layout:post
-title:46. Permutations
+layout: post
+title: 46. Permutations
 ---
 
 #### QUESTION:
