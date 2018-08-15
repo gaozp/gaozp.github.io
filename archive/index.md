@@ -5,6 +5,7 @@ description: 归档
 ---
 <ul class="archive">
 {% for post in site.posts %}
+  console.log(post.title);
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
     {% assign year = y %}
