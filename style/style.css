@@ -274,7 +274,7 @@ ul,ol {
 
 .content ul,li {
   list-style: initial;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   line-height: 2em;
 }
 
