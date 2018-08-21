@@ -7,199 +7,192 @@ title: 高通应用启动优化IO Prefetcher源码解析
 
 I/O Prefetcher是高通本身提供的一套优化方案，可以用在Android手机App冷启动的时候。
 
+但是因为是和soc相关的，所以android 原生代码中是没有办法查看到的，也就是andoridxref中是看不到的，只能通过高通的代码看。
+
+同时我们也可以看到在n和o中的实现已经不同了，n中还是通过iop-p-d来启动的，但是o中已经是通过hidl来启动了。hidl其实就是project treble提出来的，具体的内容补充我们现在讨论的内容，所以也就不去细讲了。那现在就是基于o版本的源码。
+
 #### 1.IO Prefetcher的初始化
 
-首先模块的代码在 vendor/qcom/proprietary/android-perf/io-p/文件夹中，首先从入口main函数说起：io-p-d.c
+首先模块的代码在 vendor/qcom/proprietary/android-perf/iop-hal/文件夹中，首先从入口main函数说起：io-p-d.c
 
-```c
-37int main(int argc, char *argv[])
-38{
-39    iop_server_init();
-40
-41    iop_server_exit();
-42    return 0;
-43}
+```cpp
+107IIop* HIDL_FETCH_IIop(const char* /* name */) {
+108    ALOGE("IOP-HAL: inside HIDL_FETCH_IIop");
+109    Iop *iopObj = new Iop();
+110    ALOGE("IOP-HAL: boot Address of iop object");
+111    if (iopObj) {
+    //首先load对应的lib库，获取到对应的函数地址
+112        iopObj->LoadIopLib();
+113        ALOGE("IOP-HAL: loading library is done");
+    //再进行init操作
+114        if (iopObj->mHandle.iop_server_init != NULL ) {
+115            (*(iopObj->mHandle.iop_server_init))();
+116        }
+117    }
+118    return iopObj;
+119}
 ```
 
-在main函数中，打开了iopserver，但是为什么立刻就退出了呢？带着这个疑问，我们看一下iop_server_init的具体内容：io-p.c
+获取函数地址的来看一下：
 
-```c
-315int iop_server_init()
-316{
-//获取到当前的芯片id，只有如下的芯片才能打开iop服务，否则就直接退出了。
-322    soc_id = get_soc_id();
-323    switch(soc_id)
-324    {
-325         case SOCID_8994:
-326         case SOCID_8092:
-327         case SOCID_8992:
-328         case SOCID_8996:
-329         case SOCID_8996PRO:
-330         case SOCID_8096PRO:
-331         case SOCID_8096:
-332         case SOCID_8998:
-333         case SOCID_8939:
-334             break;
-335         default:
-336             QLOGI("Fail to init IOP Server");
-337             return 0;
-338    }
-//创建对应的数据库
-340    create_database();
-341//获取到对应的socket
-342    comsoc = android_get_control_socket("iop");
-343    if (comsoc < 0) {
-344        stage = 1;
-345        goto error;
-346    }
-347//listen对应的socket
-348    rc = listen(comsoc, SOMAXCONN);
-349    if (rc != 0) {
-350        stage = 2;
-351        goto error;
-352    }
-353//创建server线程
-354    rc = pthread_create(&iop_server_thread, NULL, iop_server, NULL);
+```cpp
+62void Iop::LoadIopLib() {
 ...
-368}
+75         *(void **) (&mHandle.iop_server_init) = dlsym(mHandle.dlhandle, "iop_server_init");
+76         if ((rc = dlerror()) != NULL) {
+77             ALOGE("IOP-HAL %s Failed to get iop_server_init\n", rc);
+78             dlclose(mHandle.dlhandle);
+79             mHandle.dlhandle = NULL;
+80             return;
+81         }
+...
+99         mHandle.is_opened = true;
+100    }
+102    return;
+103}
 ```
 
-这块其实也还是没有解决我们的为什么init了之后就直接exit的疑问呀，不要急，接着看一下iop_server
+所以可以看到这就到了iopinit服务了。我们看一下iop_server_init的具体内容：io-p.cpp
 
-```c
-173static void *iop_server(void *data)
-174{
-// 原来是在这个地方开启了一个无限循环，这样就可以一直监听而不用退出了
-182    /* Main loop */
-183    for (;;) {
-184        len = sizeof(struct sockaddr_un);
-185
-186        clock_gettime(CLOCK_MONOTONIC, &m_accept);
-187        time_delta = (BILLION * (m_accept.tv_sec - connected.tv_sec)) +
-188                                (m_accept.tv_nsec - connected.tv_nsec);
-189        QLOGI("time taken from connected to accept: %llu nanoseconds",
-190                                (long long unsigned int)time_delta);
-191
-192        conn_socket = accept(comsoc, (struct sockaddr *) &addr, &len);
-193        if (conn_socket == -1) {
-194            QLOGE("PERFLOCK iop server %s: accept failed, errno=%d (%s)"
-195                                    , __func__, errno, strerror(errno));
-196            goto close_conn;
-197        }
-198
-199        clock_gettime(CLOCK_MONOTONIC, &connected);
-200
-201        rc = recv(conn_socket, &msg, sizeof(iop_msg_t), 0);
-202        if (rc < 0) {
-203            QLOGE("PERFLOCK iop server: failed to receive message, errno=%d (%s)"
-204                                    , errno, strerror(errno));
-205            goto close_conn;
-206        }
-207
-208        clock_gettime(CLOCK_MONOTONIC, &recvd);
-209
-210        /* Descramble client id */
-211        msg.client_pid ^= msg.msg;
-212        msg.client_tid ^= msg.msg;
+```cpp
+247//interface implementation
+248int iop_server_init() {
+//得到当前soc的id只有几个芯片支持iop
+254    soc_id = get_soc_id();
+255    switch(soc_id)
+256    {
+257         case SOCID_8994:
+258         case SOCID_8092:
+259         case SOCID_8992:
+260         case SOCID_8996:
+261         case SOCID_8996PRO:
+262         case SOCID_8096PRO:
+263         case SOCID_8096:
+264         case SOCID_8998:
+265         case SOCID_8939:
+266         case SOCID_SDM845:
+267             break;
+268         default:
+269             QLOGI("Fail to init IOP Server");
+270             return 0;
+271    }
+272
+273    IOPevqueue.GetDataPool().SetCBs(Alloccb, Dealloccb);
+    //进入无限循环来等待消息
+274    rc = pthread_create(&iop_server_thread, NULL, iop_server, NULL);
+275    if (rc != 0) {
+276        stage = 3;
+277        goto error;
+278    }
+279    return 1;
+280
+281error:
+282    QLOGE("Unable to create control service (stage=%d, rc=%d)", stage, rc);
+283    return 0;
+284}
+```
+
+创建线程进入无限循环处理消息，除非产生了错误，才会退出这个服务。接着看一下iop_server
+
+```c++
+122static void *iop_server(void *data)
+123{
+129    /* Main loop */
+130    for (;;) {
+131       //wait for perflock commands
+132        EventData *evData = IOPevqueue.Wait();
+//获取到当前的数据库是否建立了，没有建立的话就先创建
+142        if(is_db_init == false)
+143        {
+144            if(create_database() == 0)
+145            {
+146                //Success
+147                is_db_init = true;
+148            }
+149        }
+150
+151        cmd = evData->mEvType;
+152        msg = (iop_msg_t *)evData->mEvData;
+//对产生的数据进行处理
+154        switch (cmd) {
+155            case IOP_CMD_PERFLOCK_IOPREFETCH_START:
+156            {
+157                static bool is_in_recent_list = false;
+158                char property[PROPERTY_VALUE_MAX];
+159                int enable_prefetcher = 0;
+160
+161                property_get("enable_prefetch", property, "1");
+162                enable_prefetcher = atoi(property);
+163
+164                if(!enable_prefetcher)
+165                {
+166                    QLOGE("io prefetch is disabled");
+167                    break;
+168                }
+169                // if PID < 0 consider it as playback operation
+170                if(msg->pid < 0)
+171                {
+172                    int ittr = 0;
+173                    is_in_recent_list = false;
+174                    //Check app is in recent list
+175                    for(ittr = 0; ittr < IOP_NO_RECENT_APP; ittr++)
+176                    {
+177                        if(0 == strcmp(msg->pkg_name,recent_list[ittr]))
+178                        {
+179                            is_in_recent_list = true;
+180                            QLOGE("is_in_recent_list is TRUE");
+181                            break;
+182                        }
+183                    }
+184                    // IF Application is in recent list, return
+185                    if(true == is_in_recent_list)
+186                    {
+187                        QLOGE("io prefetch is deactivate");
+188                        break;
+189                    }
+190
+191                    if(recent_list_cnt == IOP_NO_RECENT_APP)
+192                        recent_list_cnt = 0;
+193
+194                    //Copy the package name to recent list
+195                    strlcpy(recent_list[recent_list_cnt],msg->pkg_name,PKG_LEN);
+196                    recent_list_cnt++;
+197
+198                    stop_capture();
+199                    stop_playback();
+200                    start_playback(msg->pkg_name);
+201                }
+202                // if PID > 0 then consider as capture operation
+203                if(msg->pid > 0)
+204                {
+205                    if(true == is_in_recent_list)
+206                    {
+207                        QLOGE("io prefetch Capture is deactivated ");
+208                        break;
+209                    }
+210                    stop_capture();
+211                    start_capture(msg->pid,msg->pkg_name,msg->code_path);
+212                }
 213
-214        QLOGV("Received len=%d, m=%u, v=%u, c=%u, s=%u, m=%u (0x%08x) d=%u",
-215              rc, msg.magic, msg.version, msg.client_pid, msg.seq, msg.msg, msg.msg, msg.data);
+214                break;
+215            }
 216
-217        if (rc != sizeof(iop_msg_t)) {
-218            QLOGE("Bad size");
-219        }
-220        else if (msg.magic != IOP_MAGIC) {
-221            QLOGE("Bad magic");
-222            close(conn_socket);
-223            continue;
-224        }
-225        else if (msg.version != IOP_VERSION) {
-226            QLOGE("Version mismatch");
-227            close(conn_socket);
-228            continue;
-229        }
-230
-231        //cmd = CMD_DECODE(msg);
-232        cmd = msg.cmd;
-233
-234        switch (cmd) {
-235            case IOP_CMD_PERFLOCK_IOPREFETCH_START:
-236            {
-237                static bool is_in_recent_list = false;
-238                char property[PROPERTY_VALUE_MAX];
-239                int enable_prefetcher = 0;
-240
-241                property_get("enable_prefetch", property, "1");
-242                enable_prefetcher = atoi(property);
-243
-244                if(!enable_prefetcher)
-245                {
-246                    QLOGE("io prefetch is disabled");
-247                    break;
-248                }
-249                // if PID < 0 consider it as playback operation
-250                if(msg.pid < 0)
-251                {
-252                    int ittr = 0;
-253                    is_in_recent_list = false;
-254                    //Check app is in recent list
-255                    for(ittr = 0; ittr < IOP_NO_RECENT_APP; ittr++)
-256                    {
-257                        if(0 == strcmp(msg.pkg_name,recent_list[ittr]))
-258                        {
-259                            is_in_recent_list = true;
-260                            QLOGE("is_in_recent_list is TRUE");
-261                            break;
-262                        }
-263                    }
-264                    // IF Application is in recent list, return
-265                    if(true == is_in_recent_list)
-266                    {
-267                        QLOGE("io prefetch is deactivate");
-268                        break;
-269                    }
-270
-271                    if(recent_list_cnt == IOP_NO_RECENT_APP)
-272                        recent_list_cnt = 0;
-273
-274                    //Copy the package name to recent list
-275                    strlcpy(recent_list[recent_list_cnt],msg.pkg_name,PKG_LEN);
-276                    recent_list_cnt++;
-277
-278                    stop_capture();
-279                    stop_playback();
-280                    start_playback(msg.pkg_name);
-281                }
-282                // if PID > 0 then consider as capture operation
-283                if(msg.pid > 0)
-284                {
-285                    if(true == is_in_recent_list)
-286                    {
-287                        QLOGE("io prefetch Capture is deactivated ");
-288                        break;
-289                    }
-290                    stop_capture();
-291                    start_capture(msg.pid,msg.pkg_name);
-292                }
-293
-294                break;
-295            }
-296
-297            case IOP_CMD_PERFLOCK_IOPREFETCH_STOP:
-298            {
-299                stop_capture();
-300                break;
-301            }
-302
-303            default:
-304                QLOGE("Unknown command %d", cmd);
-305        }
-306close_conn:
-307    close(conn_socket);
-308    }
-309
-310    QLOGI("IOP server thread exit due to rc=%d", rc);
-311    return NULL;
-312}
+217            case IOP_CMD_PERFLOCK_IOPREFETCH_STOP:
+218            {
+219                stop_capture();
+220                break;
+221            }
+222
+223            default:
+224                QLOGE("Unknown command %d", cmd);
+225        }
+226        IOPevqueue.GetDataPool().Return(evData);
+227    }
+228
+229    QLOGI("IOP server thread exit due to rc=%d", rc);
+230    return NULL;
+231}
 ```
+
+
 
