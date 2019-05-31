@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 872. Leaf-Similar Trees
+title: 872.Leaf-Similar Trees
 ---
 
 #### QUESTION:
