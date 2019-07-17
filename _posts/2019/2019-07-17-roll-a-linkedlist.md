@@ -35,7 +35,7 @@ example1：
 
 
         Node result = head;
-        int index = 0;
+        int index = 1;
         while (index<step){
             result = result.next;
             index++;
