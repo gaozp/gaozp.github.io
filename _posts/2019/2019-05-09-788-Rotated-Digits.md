@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 788. Rotated Digits
+categories: [leetcode]
 ---
 
 #### QUESTION:

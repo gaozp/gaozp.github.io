@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 520. Detect Capital
+categories: [leetcode]
 ---
 
 

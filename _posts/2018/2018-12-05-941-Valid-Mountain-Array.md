@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 941. Valid Mountain Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

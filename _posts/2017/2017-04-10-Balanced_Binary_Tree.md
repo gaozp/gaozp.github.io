@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 110. Balanced Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

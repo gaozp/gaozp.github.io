@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 438. Find All Anagrams in a String
+categories: [leetcode]
 ---
 
 #### QUESTION:

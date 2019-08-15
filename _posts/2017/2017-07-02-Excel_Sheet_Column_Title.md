@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 168. Excel Sheet Column Title
+categories: [leetcode]
 ---
 
 #### QUESTION:

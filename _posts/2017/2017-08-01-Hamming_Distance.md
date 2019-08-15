@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 461. Hamming Distance
+categories: [leetcode]
 ---
 
 #### QUESTION:

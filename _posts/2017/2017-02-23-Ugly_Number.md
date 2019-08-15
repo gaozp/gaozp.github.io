@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 263. Ugly Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

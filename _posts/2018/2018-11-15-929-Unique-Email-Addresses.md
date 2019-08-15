@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 929. Unique Email Addresses
+categories: [leetcode]
 ---
 
 #### QUESTION:

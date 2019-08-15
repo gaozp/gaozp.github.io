@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 219. Contains Duplicate II
+categories: [leetcode]
 ---
 
 #### QUESTION:

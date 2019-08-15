@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 598. Range Addition II
+categories: [leetcode]
 ---
 
 #### QUESTION:

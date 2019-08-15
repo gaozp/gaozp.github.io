@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 643. Maximum Average Subarray I
+categories: [leetcode]
 ---
 
 #### QUESTION:

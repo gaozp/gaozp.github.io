@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 3. Longest Substring Without Repeating Characters
+categories: [leetcode]
 ---
 
 #### QUESITON:

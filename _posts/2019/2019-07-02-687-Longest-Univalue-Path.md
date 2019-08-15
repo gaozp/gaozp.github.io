@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 687. Longest Univalue Path
+categories: [leetcode]
 ---
 #### QUESTION:
 

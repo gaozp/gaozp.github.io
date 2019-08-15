@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1010. Pairs of Songs With Total Durations Divisible by 60
+categories: [leetcode]
 ---
 #### QUESTION:
 In a list of songs, the i-th song has a duration of time[i] seconds. 

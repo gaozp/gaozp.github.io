@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 290. Word Pattern
+categories: [leetcode]
 ---
 
 #### QUESTION:

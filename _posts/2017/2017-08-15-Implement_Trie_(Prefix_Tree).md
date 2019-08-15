@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 208. Implement Trie (Prefix Tree)
+categories: [leetcode]
 ---
 
 #### QUESTION:

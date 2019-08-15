@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 121. Best Time to Buy and Sell Stock
+categories: [leetcode]
 ---
 
 #### QUESTION:

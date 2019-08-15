@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 535. Encode and Decode TinyURL
+categories: [leetcode]
 ---
 
 #### QUESTION:

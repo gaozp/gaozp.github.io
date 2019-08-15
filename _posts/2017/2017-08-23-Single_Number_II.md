@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 137. Single Number II
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 575. Distribute Candies
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 347. Top K Frequent Elements
+categories: [leetcode]
 ---
 
 #### QUESTION:

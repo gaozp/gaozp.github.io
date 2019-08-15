@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 131. Palindrome Partitioning
+categories: [leetcode]
 ---
 
 #### QUESTION:

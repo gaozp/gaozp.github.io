@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 94. Binary Tree Inorder Traversal
+categories: [leetcode]
 ---
 
 #### QUESTION:

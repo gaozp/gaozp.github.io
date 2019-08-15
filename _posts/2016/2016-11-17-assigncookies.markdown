@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 455.Assign Cookies
+categories: [leetcode]
 ---
 
 ####QUESTION

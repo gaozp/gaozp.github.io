@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 849. Maximize Distance to Closest Person
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 205. Isomorphic Strings
+categories: [leetcode]
 ---
 
 #### QUESTION:

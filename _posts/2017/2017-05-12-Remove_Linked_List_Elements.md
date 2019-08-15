@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 203. Remove Linked List Elements
+categories: [leetcode]
 ---
 
 #### QUESTION:

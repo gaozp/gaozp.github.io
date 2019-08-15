@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 746. Min Cost Climbing Stairs
+categories: [leetcode]
 ---
 
 #### QUESITON:

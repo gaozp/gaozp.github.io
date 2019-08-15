@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 938. Range Sum of BST
+categories: [leetcode]
 ---
 
 #### QUESTION:

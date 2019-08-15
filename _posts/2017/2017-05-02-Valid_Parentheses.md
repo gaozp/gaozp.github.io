@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 20. Valid Parentheses
+categories: [leetcode]
 ---
 
 #### QUESTION:

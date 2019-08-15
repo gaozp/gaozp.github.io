@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 318. Maximum Product of Word Lengths
+categories: [leetcode]
 ---
 
 #### QUESTION:

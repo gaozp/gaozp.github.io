@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 993. Cousins in Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 617. Merge Two Binary Trees
+categories: [leetcode]
 ---
 
 #### QUESTION:

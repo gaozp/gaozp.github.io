@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 861. Score After Flipping Matrix
+categories: [leetcode]
 ---
 #### QUESTION:
 We have a two dimensional matrix A where each value is 0 or 1.

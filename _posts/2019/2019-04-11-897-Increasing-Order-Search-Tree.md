@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 897. Increasing Order Search Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

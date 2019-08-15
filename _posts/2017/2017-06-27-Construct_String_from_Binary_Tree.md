@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 606. Construct String from Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

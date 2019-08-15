@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 590. N-ary Tree Postorder Traversal
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 551. Student Attendance Record I
+categories: [leetcode]
 ---
 
 #### QUESTION:

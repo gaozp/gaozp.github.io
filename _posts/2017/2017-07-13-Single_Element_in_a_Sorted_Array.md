@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 540. Single Element in a Sorted Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 507. Perfect Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

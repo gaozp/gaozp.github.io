@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 693. Binary Number with Alternating Bits
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 760.Find Anagram Mappings
+categories: [leetcode]
 ---
 
 #### QUESTION:

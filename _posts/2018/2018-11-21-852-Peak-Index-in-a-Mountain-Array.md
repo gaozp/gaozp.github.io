@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 852. Peak Index in a Mountain Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

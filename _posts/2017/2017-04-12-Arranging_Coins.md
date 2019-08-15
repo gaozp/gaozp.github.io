@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 441. Arranging Coins
+categories: [leetcode]
 ---
 
 #### QUESTION:

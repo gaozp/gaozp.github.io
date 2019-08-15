@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 111. Minimum Depth of Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

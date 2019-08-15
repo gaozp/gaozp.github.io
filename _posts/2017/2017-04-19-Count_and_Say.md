@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 38. Count and Say
+categories: [leetcode]
 ---
 
 #### QUESTION:

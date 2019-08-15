@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 27. Remove Element
+categories: [leetcode]
 ---
 
 #### QUESTION:

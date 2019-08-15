@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1128. Number of Equivalent Domino Pairs
+categories: [leetcode]
 ---
 #### QUESTION:
 

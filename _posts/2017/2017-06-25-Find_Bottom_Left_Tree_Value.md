@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 513. Find Bottom Left Tree Value
+categories: [leetcode]
 ---
 
 #### QUESTION:

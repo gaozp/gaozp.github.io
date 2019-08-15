@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1079. Letter Tile Possibilities
+categories: [leetcode]
 ---
 #### QUESTION:
 

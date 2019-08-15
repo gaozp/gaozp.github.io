@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 892. Surface Area of 3D Shapes
+categories: [leetcode]
 ---
 
 #### QUESTION:

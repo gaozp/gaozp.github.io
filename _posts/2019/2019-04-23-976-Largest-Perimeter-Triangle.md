@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 976. Largest Perimeter Triangle
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 268. Missing Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

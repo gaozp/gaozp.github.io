@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 867. Transpose Matrix
+categories: [leetcode]
 ---
 
 #### QUESTION:

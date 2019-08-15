@@ -1,6 +1,7 @@
 ---
 layout: post
 title: roll a linkedlist
+categories: [leetcode]
 ---
 #### QUESTION:
 有一个单向链表，给一个既定的值k，正值表示向前，负值表示向后移动位数，求出移动后的链表。

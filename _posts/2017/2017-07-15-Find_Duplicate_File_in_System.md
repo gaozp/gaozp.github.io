@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 609. Find Duplicate File in System
+categories: [leetcode]
 ---
 
 #### QUESTION:

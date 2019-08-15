@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1051. Height Checker
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 682. Baseball Game
+categories: [leetcode]
 ---
 
 #### QUESTION:

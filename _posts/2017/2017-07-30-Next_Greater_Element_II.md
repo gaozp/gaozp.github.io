@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 503. Next Greater Element II
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 448. Find All Numbers Disappeared in an Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

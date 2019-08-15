@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 922. Sort Array By Parity II
+categories: [leetcode]
 ---
 
 #### QUESTION:

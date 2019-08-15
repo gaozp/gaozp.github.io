@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 657. Judge Route Circle
+categories: [leetcode]
 ---
 
 #### QUESTION:

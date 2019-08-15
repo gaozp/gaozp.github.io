@@ -1,6 +1,7 @@
 ---
 layout: post
 title: startactivity流程
+categories: [tech]
 ---
 
 #### 1.activity.startactivity

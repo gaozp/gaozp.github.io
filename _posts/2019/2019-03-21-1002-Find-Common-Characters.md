@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1002. Find Common Characters
+categories: [leetcode]
 ---
 
 #### QUESTION:

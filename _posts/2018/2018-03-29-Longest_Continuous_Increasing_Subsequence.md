@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 674. Longest Continuous Increasing Subsequence
+categories: [leetcode]
 ---
 
 #### QUESTION:

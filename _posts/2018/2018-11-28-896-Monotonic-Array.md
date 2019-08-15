@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 896. Monotonic Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

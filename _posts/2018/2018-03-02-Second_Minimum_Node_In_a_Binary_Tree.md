@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 671. Second Minimum Node In a Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

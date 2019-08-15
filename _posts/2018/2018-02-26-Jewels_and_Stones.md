@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 771. Jewels and Stones
+categories: [leetcode]
 ---
 
 #### QUESTION:

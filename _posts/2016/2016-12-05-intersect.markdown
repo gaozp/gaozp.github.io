@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 350. Intersection of Two Arrays II
+categories: [leetcode]
 ---
 
 ####QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 118. Pascal's Triangle
+categories: [leetcode]
 ---
 
 #### QUESTION:

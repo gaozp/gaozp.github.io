@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 482. License Key Formatting
+categories: [leetcode]
 ---
 #### QUESTION:
 You are given a license key represented as a string S which consists only alphanumeric character and dashes. The string is separated into N+1 groups by N dashes.

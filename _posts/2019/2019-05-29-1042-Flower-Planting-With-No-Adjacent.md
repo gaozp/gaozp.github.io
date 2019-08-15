@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1042. Flower Planting With No Adjacent
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 977. Squares of a Sorted Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

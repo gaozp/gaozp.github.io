@@ -1,6 +1,7 @@
 ---
 layout: post
 title: APP COMPACTION 源码分析(kernel层)
+categories: [tech]
 ---
 ### 前言：
 上篇说到了framework层其实是通过在/proc/pid/reclaim下面写入full，或者some来进行reclaim，但是，这只是frameworks层的，那么kernel层的是什么样子的呢，我们书接上回。

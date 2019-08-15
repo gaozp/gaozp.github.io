@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1033. Moving Stones Until Consecutive
+categories: [leetcode]
 ---
 
 #### QUESTION:

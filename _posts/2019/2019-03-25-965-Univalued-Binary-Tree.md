@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 965. Univalued Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

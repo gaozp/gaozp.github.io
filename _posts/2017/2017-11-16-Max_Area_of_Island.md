@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 695. Max Area of Island
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 303. Range Sum Query - Immutable
+categories: [leetcode]
 ---
 
 #### QUESTION:

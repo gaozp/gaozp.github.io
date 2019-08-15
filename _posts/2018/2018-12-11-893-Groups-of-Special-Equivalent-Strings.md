@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 893. Groups of Special-Equivalent Strings
+categories: [leetcode]
 ---
 
 #### QUESTION:

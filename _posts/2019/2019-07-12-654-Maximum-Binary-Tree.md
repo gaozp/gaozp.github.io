@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 654. Maximum Binary Tree
+categories: [leetcode]
 ---
 #### QUESTION:
 

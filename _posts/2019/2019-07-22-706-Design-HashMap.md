@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 706. Design HashMap
+categories: [leetcode]
 ---
 #### QUESTION:
 Design a HashMap without using any built-in hash table libraries.

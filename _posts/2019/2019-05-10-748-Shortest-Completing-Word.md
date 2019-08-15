@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 748. Shortest Completing Word
+categories: [leetcode]
 ---
 
 #### QUESTION:

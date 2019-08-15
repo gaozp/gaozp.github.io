@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 696. Count Binary Substrings
+categories: [leetcode]
 ---
 
 #### QUESTION:

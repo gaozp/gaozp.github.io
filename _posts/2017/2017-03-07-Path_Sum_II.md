@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 113. Path Sum II
+categories: [leetcode]
 ---
 
 #### QUESTION:

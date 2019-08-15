@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 888. Fair Candy Swap
+categories: [leetcode]
 ---
 
 #### QUESTION:

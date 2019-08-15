@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 890. Find and Replace Pattern
+categories: [leetcode]
 ---
 #### QUESTION:
 You have a list of words and a pattern, and you want to know which words in words matches the pattern.

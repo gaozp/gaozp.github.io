@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 623. Add One Row to Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

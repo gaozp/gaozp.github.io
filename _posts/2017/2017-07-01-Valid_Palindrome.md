@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 125. Valid Palindrome
+categories: [leetcode]
 ---
 
 #### QUESTION:

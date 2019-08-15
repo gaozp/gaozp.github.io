@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 343. Integer Break
+categories: [leetcode]
 ---
 
 #### QUESTION:

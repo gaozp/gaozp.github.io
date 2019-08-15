@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1021. Remove Outermost Parentheses
+categories: [leetcode]
 ---
 
 #### QUESTION:

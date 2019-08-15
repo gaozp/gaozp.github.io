@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 486. Predict the Winner
+categories: [leetcode]
 ---
 
 #### QUESTION:

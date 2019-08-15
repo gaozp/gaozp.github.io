@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1047. Remove All Adjacent Duplicates In String
+categories: [leetcode]
 ---
 
 #### QUESTION:

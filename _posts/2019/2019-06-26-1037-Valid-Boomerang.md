@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1037. Valid Boomerang
+categories: [leetcode]
 ---
 #### QUESTION:
 A boomerang is a set of 3 points that are all distinct and not in a straight line.

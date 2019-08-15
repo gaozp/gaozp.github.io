@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 292 Nim Game
+categories: [leetcode]
 ---
 
 ####QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 404. Sum of Left Leaves
+categories: [leetcode]
 ---
 
 

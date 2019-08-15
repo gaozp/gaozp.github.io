@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 811. Subdomain Visit Count
+categories: [leetcode]
 ---
 
 #### QUESTION:

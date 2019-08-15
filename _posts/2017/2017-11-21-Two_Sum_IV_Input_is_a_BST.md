@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 653. Two Sum IV - Input is a BST
+categories: [leetcode]
 ---
 
 #### QUESTION:

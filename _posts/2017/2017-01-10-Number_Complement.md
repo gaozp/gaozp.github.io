@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 476. Number Complement
+categories: [leetcode]
 ---
 
 #### QUESTION:

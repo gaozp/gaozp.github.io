@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 257. Binary Tree Paths
+categories: [leetcode]
 ---
 
 #### QUESTION:

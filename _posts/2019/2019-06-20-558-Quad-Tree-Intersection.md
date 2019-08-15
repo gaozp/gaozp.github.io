@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 558. Quad Tree Intersection
+categories: [leetcode]
 ---
 
 #### QUESTION:

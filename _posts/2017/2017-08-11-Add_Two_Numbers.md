@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 2. Add Two Numbers
+categories: [leetcode]
 ---
 
 #### QUESTION:

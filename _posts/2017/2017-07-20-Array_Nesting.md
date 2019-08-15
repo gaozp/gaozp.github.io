@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 565. Array Nesting
+categories: [leetcode]
 ---
 
 #### QUESTION:

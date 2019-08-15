@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 697. Degree of an Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1008. Construct Binary Search Tree from Preorder Traversal
+categories: [leetcode]
 ---
 #### QUESTION:
 Return the root node of a binary search tree that matches the given preorder traversal.

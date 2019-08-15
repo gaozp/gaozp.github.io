@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 646. Maximum Length of Pair Chain
+categories: [leetcode]
 ---
 
 #### QUESTION:

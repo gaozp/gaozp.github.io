@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 648. Replace Words
+categories: [leetcode]
 ---
 
 #### QUESTION:

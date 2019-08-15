@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 784. Letter Case Permutation
+categories: [leetcode]
 ---
 
 #### QUESTION:

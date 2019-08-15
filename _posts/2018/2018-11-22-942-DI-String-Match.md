@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 942. DI String Match
+categories: [leetcode]
 ---
 
 #### QUESTION:

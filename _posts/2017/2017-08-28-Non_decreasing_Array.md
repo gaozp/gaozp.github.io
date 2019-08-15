@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 665. Non-decreasing Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

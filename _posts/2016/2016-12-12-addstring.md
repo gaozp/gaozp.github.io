@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 415. Add Strings
+categories: [leetcode]
 ---
 
 #### QUESTION:

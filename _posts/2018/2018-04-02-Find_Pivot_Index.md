@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 724. Find Pivot Index
+categories: [leetcode]
 ---
 
 #### QUESTION:

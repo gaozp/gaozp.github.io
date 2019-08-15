@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 925. Long Pressed Name
+categories: [leetcode]
 ---
 
 #### QUESTION:

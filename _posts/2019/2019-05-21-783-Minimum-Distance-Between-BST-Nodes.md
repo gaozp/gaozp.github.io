@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 783. Minimum Distance Between BST Nodes
+categories: [leetcode]
 ---
 
 #### QUESTION:

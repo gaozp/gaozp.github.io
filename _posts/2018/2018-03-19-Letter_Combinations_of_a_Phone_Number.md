@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 17. Letter Combinations of a Phone Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

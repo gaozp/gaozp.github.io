@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1013. Partition Array Into Three Parts With Equal Sum
+categories: [leetcode]
 ---
 
 #### QUESTION:

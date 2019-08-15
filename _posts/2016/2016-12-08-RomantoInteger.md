@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 13. Roman to Integer
+categories: [leetcode]
 ---
 
 

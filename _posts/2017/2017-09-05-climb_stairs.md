@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 爬楼梯
+categories: [leetcode]
 ---
 
 #### QUESTION:

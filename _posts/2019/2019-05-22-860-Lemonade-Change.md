@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 860. Lemonade Change
+categories: [leetcode]
 ---
 
 #### QUESTION:

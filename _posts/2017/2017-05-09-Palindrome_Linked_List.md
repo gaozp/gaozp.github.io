@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 234. Palindrome Linked List
+categories: [leetcode]
 ---
 
 #### QUESTION:

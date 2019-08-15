@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 342. Power of Four
+categories: [leetcode]
 ---
 
 #### QUESTION:

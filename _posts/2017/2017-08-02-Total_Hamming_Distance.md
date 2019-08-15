@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 477. Total Hamming Distance
+categories: [leetcode]
 ---
 
 #### QUESTION:

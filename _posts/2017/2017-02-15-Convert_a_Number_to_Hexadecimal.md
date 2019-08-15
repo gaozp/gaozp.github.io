@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 405. Convert a Number to Hexadecimal
+categories: [leetcode]
 ---
 
 #### QUESTION:

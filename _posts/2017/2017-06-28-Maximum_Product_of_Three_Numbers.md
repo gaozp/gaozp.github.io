@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 628. Maximum Product of Three Numbers
+categories: [leetcode]
 ---
 
 #### QUESTION:

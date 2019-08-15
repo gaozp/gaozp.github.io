@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 492. Construct the Rectangle
+categories: [leetcode]
 ---
 
 #### QUESTION:

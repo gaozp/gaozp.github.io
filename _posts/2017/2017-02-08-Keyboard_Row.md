@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 500. Keyboard Row
+categories: [leetcode]
 ---
 
 #### QUESTION:

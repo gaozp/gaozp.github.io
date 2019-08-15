@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 624. Maximum Distance in Arrays
+categories: [leetcode]
 ---
 
 #### QUESTION:

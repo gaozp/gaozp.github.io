@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 769. Max Chunks To Make Sorted
+categories: [leetcode]
 ---
 
 #### QUESTION:

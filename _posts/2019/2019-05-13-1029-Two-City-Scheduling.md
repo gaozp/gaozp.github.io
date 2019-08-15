@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1029. Two City Scheduling
+categories: [leetcode]
 ---
 
 #### QUESTION:

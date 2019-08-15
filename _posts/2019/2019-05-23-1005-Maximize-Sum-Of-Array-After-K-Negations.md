@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1005. Maximize Sum Of Array After K Negations
+categories: [leetcode]
 ---
 
 #### QUESTION:

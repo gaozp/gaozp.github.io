@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 766. Toeplitz Matrix
+categories: [leetcode]
 ---
 
 #### QUESTION:

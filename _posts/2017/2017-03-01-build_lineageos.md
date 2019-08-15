@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LineageOS本地nexus 5编译烧机过程
+categories: [leetcode]
 ---
 
 自从cm转行做其他东西之后，从此开源界又少了一个大头，但是后来LineageOS系统继承了cm的遗志，由原班人马倾情打造的系统也就出来了。还是看看吧。

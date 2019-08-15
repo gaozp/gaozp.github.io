@@ -1,6 +1,7 @@
 ---
 layou: post
 title: 235. Lowest Common Ancestor of a Binary Search Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

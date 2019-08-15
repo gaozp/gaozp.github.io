@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 53. Maximum Subarray
+categories: [leetcode]
 ---
 
 #### QUESTION:

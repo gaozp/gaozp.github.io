@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 883. Projection Area of 3D Shapes
+categories: [leetcode]
 ---
 
 #### QUESTION:

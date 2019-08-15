@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 357. Count Numbers with Unique Digits
+categories: [leetcode]
 ---
 
 #### QUESTION:

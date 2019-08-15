@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 498. Diagonal Traverse
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 720. Longest Word in Dictionary
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 557. Reverse Words in a String III
+categories: [leetcode]
 ---
 
 #### QUESTION:

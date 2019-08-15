@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 414. Third Maximum Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

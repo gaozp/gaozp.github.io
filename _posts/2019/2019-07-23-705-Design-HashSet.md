@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 705. Design HashSet
+categories: [leetcode]
 ---
 #### QUESTION:
 Design a HashSet without using any built-in hash table libraries.

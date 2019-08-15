@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 427. Construct Quad Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

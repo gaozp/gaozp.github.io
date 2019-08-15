@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 501. Find Mode in Binary Search Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

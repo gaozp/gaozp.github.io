@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 605. Can Place Flowers
+categories: [leetcode]
 ---
 
 #### QUESTION:

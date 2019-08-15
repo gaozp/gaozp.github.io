@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 413. Arithmetic Slices
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 278. First Bad Version
+categories: [leetcode]
 ---
 
 #### QUESTION:

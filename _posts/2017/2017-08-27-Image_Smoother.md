@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 661. Image Smoother
+categories: [leetcode]
 ---
 
 #### QUESTION:

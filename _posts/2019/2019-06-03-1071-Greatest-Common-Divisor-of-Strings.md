@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1071. Greatest Common Divisor of Strings
+categories: [leetcode]
 ---
 #### QUESTION:
 For strings S and T, we say "T divides S" if and only if S = T + ... + T  (T concatenated with itself 1 or more times)

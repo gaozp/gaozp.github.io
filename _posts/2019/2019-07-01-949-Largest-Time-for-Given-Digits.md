@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 949. Largest Time for Given Digits
+categories: [leetcode]
 ---
 #### QUESTION:
 Given an array of 4 digits, return the largest 24 hour time that can be made.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 406. Queue Reconstruction by Height
+categories: [leetcode]
 ---
 
 #### QUESTION:

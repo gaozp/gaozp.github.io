@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 462. Minimum Moves to Equal Array Elements II
+categories: [leetcode]
 ---
 
 #### QUESTION:

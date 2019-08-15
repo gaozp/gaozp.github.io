@@ -1,6 +1,7 @@
 ---
 layout: post
 title: move zeros
+categories: [leetcode]
 ---
 #### QUESTION:
 给一个数字[2,1,0,4,5,0,3], 把0移动到最后，其他元素顺序保持不变。要求时间复杂度O(n) 空间复杂度O(1)

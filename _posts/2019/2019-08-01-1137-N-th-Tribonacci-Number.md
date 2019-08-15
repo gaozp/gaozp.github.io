@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1137. N-th Tribonacci Number
+categories: [leetcode]
 ---
 #### QUESTION:
 The Tribonacci sequence Tn is defined as follows: 

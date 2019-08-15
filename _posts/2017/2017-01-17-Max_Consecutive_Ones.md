@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 485. Max Consecutive Ones
+categories: [leetcode]
 ---
 
 #### QUESTION:

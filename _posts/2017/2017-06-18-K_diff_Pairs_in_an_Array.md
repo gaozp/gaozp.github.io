@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 532. K-diff Pairs in an Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 367. Valid Perfect Square
+categories: [leetcode]
 ---
 
 #### QUESTION:

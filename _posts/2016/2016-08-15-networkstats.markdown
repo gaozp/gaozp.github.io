@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android流量统计源码分析
+categories: [tech]
 ---
 
 Android是基于linux的，所以Android本身并没有去做流量统计的工作，只是将linux暴露出来的流量统计结果保存在了本地而已。简而言之的话就是：__linux在数据包经过iptables的时候，将这些流量包的统计结果都暴露在了虚拟设备/proc下面，Android则在特定的时间进行统计，也就是将/proc下的统计结果保存到/data/system/下，原因比较简单，因为每次开关机，虚拟的文件系统/proc就会进行重新挂载，这个时候之前的所有数据就都已经没有了。__  

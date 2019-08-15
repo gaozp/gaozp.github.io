@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 638. Shopping Offers
+categories: [leetcode]
 ---
 
 #### QUESTION:

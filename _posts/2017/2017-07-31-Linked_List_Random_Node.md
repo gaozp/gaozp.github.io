@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 382. Linked List Random Node
+categories: [leetcode]
 ---
 
 #### QUESTION:

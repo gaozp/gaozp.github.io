@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 754. Reach a Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

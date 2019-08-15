@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 680. Valid Palindrome II
+categories: [leetcode]
 ---
 
 #### QUESTION:

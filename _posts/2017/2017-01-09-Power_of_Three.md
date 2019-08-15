@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 326. Power of Three
+categories: [leetcode]
 ---
 
 #### QUESTION:

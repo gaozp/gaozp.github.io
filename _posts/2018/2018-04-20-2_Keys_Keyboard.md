@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 650. 2 Keys Keyboard
+categories: [leetcode]
 ---
 
 #### QUESTION:

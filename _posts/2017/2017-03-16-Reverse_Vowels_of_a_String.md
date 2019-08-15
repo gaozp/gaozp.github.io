@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 345. Reverse Vowels of a String
+categories: [leetcode]
 ---
 
 #### QUESTION:

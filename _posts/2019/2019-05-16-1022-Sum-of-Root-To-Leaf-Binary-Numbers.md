@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1022. Sum of Root To Leaf Binary Numbers
+categories: [leetcode]
 ---
 
 #### QUESTION:

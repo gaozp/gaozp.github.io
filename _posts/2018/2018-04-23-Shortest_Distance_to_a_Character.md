@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 821. Shortest Distance to a Character
+categories: [leetcode]
 ---
 
 #### QUESTION:

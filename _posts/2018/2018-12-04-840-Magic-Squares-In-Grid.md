@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 840. Magic Squares In Grid
+categories: [leetcode]
 ---
 
 #### QUESTION:

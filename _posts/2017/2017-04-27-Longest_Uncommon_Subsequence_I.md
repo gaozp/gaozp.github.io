@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 521. Longest Uncommon Subsequence I
+categories: [leetcode]
 ---
 
 #### QUESTION:

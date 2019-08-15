@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 387. First Unique Character in a String
+categories: [leetcode]
 ---
 
 ####QUESTION:

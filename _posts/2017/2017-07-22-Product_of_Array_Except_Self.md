@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 238. Product of Array Except Self
+categories: [leetcode]
 ---
 
 #### QUESTION:

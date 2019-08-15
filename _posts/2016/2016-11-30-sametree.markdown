@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 100. Same Tree
+categories: [leetcode]
 ---
 
 ####QUESTION:

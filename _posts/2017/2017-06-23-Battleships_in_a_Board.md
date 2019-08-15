@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 419. Battleships in a Board
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1046. Last Stone Weight
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 563. Binary Tree Tilt
+categories: [leetcode]
 ---
 
 #### QUESTION:

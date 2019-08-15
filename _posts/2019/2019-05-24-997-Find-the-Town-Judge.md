@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 997. Find the Town Judge
+categories: [leetcode]
 ---
 
 #### QUESTION:

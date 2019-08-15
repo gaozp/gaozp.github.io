@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 994. Rotting Oranges
+categories: [leetcode]
 ---
 #### QUESTION:
 In a given grid, each cell can have one of three values:

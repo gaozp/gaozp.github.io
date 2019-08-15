@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1041. Robot Bounded In Circle
+categories: [leetcode]
 ---
 
 #### QUESTION：

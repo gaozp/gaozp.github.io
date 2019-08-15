@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 812. Largest Triangle Area
+categories: [leetcode]
 ---
 
 #### QUESTION:

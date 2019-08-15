@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 566. Reshape the Matrix
+categories: [leetcode]
 ---
 
 #### QUESTION:

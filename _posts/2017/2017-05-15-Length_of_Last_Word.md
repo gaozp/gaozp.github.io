@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 58. Length of Last Word
+categories: [leetcode]
 ---
 
 #### QUESTION:

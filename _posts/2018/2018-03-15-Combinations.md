@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 77. Combinations
+categories: [leetcode]
 ---
 
 #### QUESTION:

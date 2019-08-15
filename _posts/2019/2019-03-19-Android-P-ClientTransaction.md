@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Android P ClientTransaction
+categories: [tech]
 ---
 
 在Android P中，应用的生命周期和AMS的联动有了改变。看一下其中的改动吧。

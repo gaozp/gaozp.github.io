@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 914. X of a Kind in a Deck of Cards
+categories: [leetcode]
 ---
 
 #### QUESTION:

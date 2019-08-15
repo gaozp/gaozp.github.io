@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 933. Number of Recent Calls
+categories: [leetcode]
 ---
 
 #### QUESTION:

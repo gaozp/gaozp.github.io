@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 806. Number of Lines To Write String
+categories: [leetcode]
 ---
 
 #### QUESTION:

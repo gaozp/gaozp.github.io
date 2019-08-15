@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 338. Counting Bits
+categories: [leetcode]
 ---
 
 #### QUESTION:

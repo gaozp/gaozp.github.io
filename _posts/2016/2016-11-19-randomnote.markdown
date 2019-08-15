@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 383. Ransom Note
+categories: [leetcode]
 ---
 
 ####QUESTION:

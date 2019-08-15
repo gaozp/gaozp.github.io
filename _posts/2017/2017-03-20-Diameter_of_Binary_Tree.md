@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 543. Diameter of Binary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

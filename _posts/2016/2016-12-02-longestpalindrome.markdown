@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 409. Longest Palindrome
+categories: [leetcode]
 ---
 
 ####QUESTION:

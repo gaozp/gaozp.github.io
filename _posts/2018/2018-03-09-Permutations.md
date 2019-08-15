@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 46. Permutations
+categories: [leetcode]
 ---
 
 #### QUESTION:

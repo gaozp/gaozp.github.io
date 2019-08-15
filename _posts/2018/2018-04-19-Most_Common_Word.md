@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 819. Most Common Word
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 495. Teemo Attacking
+categories: [leetcode]
 ---
 
 #### QUESTIN:

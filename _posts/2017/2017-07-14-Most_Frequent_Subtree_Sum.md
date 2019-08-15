@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 508. Most Frequent Subtree Sum
+categories: [leetcode]
 ---
 
 #### QUESTION:

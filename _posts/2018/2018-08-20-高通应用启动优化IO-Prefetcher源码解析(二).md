@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 高通应用启动优化IO-Prefetcher源码解析(二)
+categories: [tech]
 ---
 
 上次说到了是如何缓存到本地的，那么缓存到本地就应该使用了吧。在start_capture对应的就是start_playback

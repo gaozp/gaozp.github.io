@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 553. Optimal Division
+categories: [leetcode]
 ---
 
 #### QUESTION:

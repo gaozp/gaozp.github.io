@@ -1,0 +1,19 @@
+1.phonewindow是通过windowpolicy通过当前机器算出来的对应的策略提供，在手机上就是phonewindow。
+
+2.decorview是在setcontentview的时候，计算当前窗体是否有contentparent，来进行初始化decorview。
+
+3.handleresumeactivity的时候，将decorview添加到当前wm中。
+
+4.wm中addview的时候，新建一个rootviewimpl，包含一个surface，同时将decorview 放入 viewrootimpl中。
+
+5.同时在viewroot的setview函数中，需要通过wms的session来和wms联系在一起
+
+![img](https://img-blog.csdn.net/20150802162246943?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+
+6.同时，viewrootimpl会向choreographer请求vsync，将callback传给choreographer，choreographer会通过native方法，请求vsync。choreographer在收到vsync的时候调用callback，也就是performtraversals。
+
+7.viewrootimpl relayout函数调用session的relayout，然后调用到wms中的relayout。wms会通过surfacecontrol将surface和surfaceflinger联合在一起。
+
+8.wms返回给app端通过copyfrom拿到的一块surface，而自己内部也保存了对应的nativeobject，通过这个object来设置对应的属性。这就是所说的两块surface。
+
+9.

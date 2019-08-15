@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 953. Verifying an Alien Dictionary
+categories: [leetcode]
 ---
 
 #### QUESTION:

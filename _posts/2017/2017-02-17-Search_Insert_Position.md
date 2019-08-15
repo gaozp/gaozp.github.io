@@ -1,6 +1,7 @@
 ---
 layou: post
 title: 35. Search Insert Position
+categories: [leetcode]
 ---
 
 #### QUESTION:

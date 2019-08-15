@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 67. Add Binary
+categories: [leetcode]
 ---
 
 #### QUESTION:

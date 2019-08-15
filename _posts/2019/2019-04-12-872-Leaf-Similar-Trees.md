@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 872.Leaf-Similar Trees
+categories: [leetcode]
 ---
 
 #### QUESTION:

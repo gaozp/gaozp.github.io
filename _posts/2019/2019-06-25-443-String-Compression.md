@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 443. String Compression
+categories: [leetcode]
 ---
 #### QUESTION:
 Given an array of characters, compress it in-place.

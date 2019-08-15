@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 401. Binary Watch
+categories: [leetcode]
 ---
 
 #### QUESTION:

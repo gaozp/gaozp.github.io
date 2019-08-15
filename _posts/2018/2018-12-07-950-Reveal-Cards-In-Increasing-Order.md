@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 950. Reveal Cards In Increasing Order
+categories: [leetcode]
 ---
 
 #### QUESTION:

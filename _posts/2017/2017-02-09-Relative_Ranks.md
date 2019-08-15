@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 506. Relative Ranks
+categories: [leetcode]
 ---
 
 #### QUESTION:

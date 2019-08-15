@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 384. Shuffle an Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

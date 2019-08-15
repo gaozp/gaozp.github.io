@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 47. Permutations II
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 216. Combination Sum III
+categories: [leetcode]
 ---
 
 #### QUESTION:

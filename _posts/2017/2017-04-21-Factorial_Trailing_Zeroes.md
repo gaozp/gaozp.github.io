@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 172. Factorial Trailing Zeroes
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 三个线程轮流打印ABC
+categories: [leetcode]
 ---
 
 #### QUESTION:

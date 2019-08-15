@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 944. Delete Columns to Make Sorted
+categories: [leetcode]
 ---
 
 #### QUESTION:

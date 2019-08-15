@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1089. Duplicate Zeros
+categories: [leetcode]
 ---
 #### QUESTION:
 

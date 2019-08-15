@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 7. Reverse Integer
+categories: [leetcode]
 ---
 
 #### QUESTION:

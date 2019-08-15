@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 102. Binary Tree Level Order Traversal
+categories: [leetcode]
 ---
 
 #### QUSTION:

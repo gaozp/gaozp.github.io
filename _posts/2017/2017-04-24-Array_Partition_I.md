@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 561. Array Partition I
+categories: [leetcode]
 ---
 
 #### QUESTION:

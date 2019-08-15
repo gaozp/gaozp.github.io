@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 479. Largest Palindrome Product
+categories: [leetcode]
 ---
 
 #### QUESTION:

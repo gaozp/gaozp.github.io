@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 728. Self Dividing Numbers
+categories: [leetcode]
 ---
 
 #### QUESTION:

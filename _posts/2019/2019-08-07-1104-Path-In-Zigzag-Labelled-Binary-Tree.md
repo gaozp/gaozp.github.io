@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1104. Path In Zigzag Labelled Binary Tree
+categories: [leetcode]
 ---
 #### QUESTION:
 In an infinite binary tree where every node has two children, the nodes are labelled in row order.

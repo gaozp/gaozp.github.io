@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 999. Available Captures for Rook
+categories: [leetcode]
 ---
 
 #### QUESTION:

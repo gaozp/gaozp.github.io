@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 526. Beautiful Arrangement
+categories: [leetcode]
 ---
 
 #### QUESTION:

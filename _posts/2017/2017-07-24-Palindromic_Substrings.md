@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 647. Palindromic Substrings
+categories: [leetcode]
 ---
 
 #### QUESTION:

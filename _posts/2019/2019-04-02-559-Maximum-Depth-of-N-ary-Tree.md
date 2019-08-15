@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 559. Maximum Depth of N-ary Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

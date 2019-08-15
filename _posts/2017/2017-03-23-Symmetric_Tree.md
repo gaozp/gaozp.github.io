@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 101. Symmetric Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

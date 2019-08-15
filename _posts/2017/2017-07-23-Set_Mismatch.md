@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 645. Set Mismatch
+categories: [leetcode]
 ---
 
 #### QUESTION:

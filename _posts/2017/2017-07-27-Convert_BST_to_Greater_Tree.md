@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 538. Convert BST to Greater Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

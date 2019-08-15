@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 64. Minimum Path Sum
+categories: [leetcode]
 ---
 
 #### QUESTION:

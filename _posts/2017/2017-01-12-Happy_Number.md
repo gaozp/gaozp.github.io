@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 202. Happy Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

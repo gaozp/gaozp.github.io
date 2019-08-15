@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 530. Minimum Absolute Difference in BST
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 26. Remove Duplicates from Sorted Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 836. Rectangle Overlap
+categories: [leetcode]
 ---
 
 #### QUESTION:

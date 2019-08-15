@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 22. Generate Parentheses
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1123. Lowest Common Ancestor of Deepest Leaves
+categories: [leetcode]
 ---
 #### QUESTION:
 Given a rooted binary tree, return the lowest common ancestor of its deepest leaves.

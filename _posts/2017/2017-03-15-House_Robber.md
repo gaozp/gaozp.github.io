@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 198. House Robber
+categories: [leetcode]
 ---
 
 #### QUESTION:

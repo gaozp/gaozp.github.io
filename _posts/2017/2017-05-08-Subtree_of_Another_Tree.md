@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 572. Subtree of Another Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

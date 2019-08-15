@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 231. Power of Two
+categories: [leetcode]
 ---
 
 #### QUESTIONS:

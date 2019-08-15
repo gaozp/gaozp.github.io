@@ -1,7 +1,7 @@
 ---
 layout: post
 title: watchdog 原理
-category: tec 
+categories: [tech]
 ---
 
 Linux是有watchdog机制，但是Android在用户空间中也实现了自己的watchdog机制，来监控用户空间中系统服务的状态。  

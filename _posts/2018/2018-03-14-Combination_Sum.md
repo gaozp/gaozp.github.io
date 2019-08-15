@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 39. Combination Sum
+categories: [leetcode]
 ---
 
 #### QUESTION:

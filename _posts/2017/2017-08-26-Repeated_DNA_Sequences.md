@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 187. Repeated DNA Sequences
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 844. Backspace String Compare
+categories: [leetcode]
 ---
 
 #### QUESTION:

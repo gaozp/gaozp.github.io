@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 884. Uncommon Words from Two Sentences
+categories: [leetcode]
 ---
 
 #### QUESTION:

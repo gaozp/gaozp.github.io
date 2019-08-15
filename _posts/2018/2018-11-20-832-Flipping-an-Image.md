@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 832. Flipping an Image
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 88 Merge Sorted Array
+categories: [leetcode]
 ---
 
 ####QUESTION:  

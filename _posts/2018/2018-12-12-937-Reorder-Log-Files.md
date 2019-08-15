@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 937. Reorder Log Files
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 189. Rotate Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 190. Reverse Bits
+categories: [leetcode]
 ---
 
 #### QUESTION:

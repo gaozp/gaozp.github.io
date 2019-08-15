@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 509. Fibonacci Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

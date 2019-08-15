@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 451. Sort Characters By Frequency
+categories: [leetcode]
 ---
 
 #### QUESTION:

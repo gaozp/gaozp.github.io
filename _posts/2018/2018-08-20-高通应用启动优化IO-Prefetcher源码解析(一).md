@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 高通应用启动优化IO Prefetcher源码解析
+categories: [tech]
 ---
 
 ### 前言：

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 14. Longest Common Prefix
+categories: [leetcode]
 ---
 
 #### QUESTION:

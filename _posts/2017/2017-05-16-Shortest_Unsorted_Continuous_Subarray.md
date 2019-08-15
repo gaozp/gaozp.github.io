@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 581. Shortest Unsorted Continuous Subarray
+categories: [leetcode]
 ---
 
 #### QUESTION:

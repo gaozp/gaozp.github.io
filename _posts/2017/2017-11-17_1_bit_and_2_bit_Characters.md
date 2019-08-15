@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 717. 1-bit and 2-bit Characters
+categories: [leetcode]
 ---
 
 #### QUESITON:

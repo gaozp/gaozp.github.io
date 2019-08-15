@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 260. Single Number III
+categories: [leetcode]
 ---
 
 #### QUESTION:

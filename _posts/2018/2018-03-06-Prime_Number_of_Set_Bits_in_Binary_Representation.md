@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 762. Prime Number of Set Bits in Binary Representation
+categories: [leetcode]
 ---
 
 #### QUESTION:

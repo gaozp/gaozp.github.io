@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 232. Implement Queue using Stacks
+categories: [leetcode]
 ---
 
 #### QUESTION:

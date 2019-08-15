@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 160. Intersection of Two Linked Lists
+categories: [leetcode]
 ---
 
 #### QUESTION:

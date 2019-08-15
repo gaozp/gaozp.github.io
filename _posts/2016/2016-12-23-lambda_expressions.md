@@ -1,6 +1,7 @@
 ---
 layout: post
 title: lambda expressions
+categories: [tech]
 ---
 
 #### 前言：

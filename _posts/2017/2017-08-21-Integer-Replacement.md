@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 397. Integer Replacement
+categories: [leetcode]
 ---
 
 #### QUESTION:

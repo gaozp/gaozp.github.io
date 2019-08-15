@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 633. Sum of Square Numbers
+categories: [leetcode]
 ---
 
 #### QUESTION:

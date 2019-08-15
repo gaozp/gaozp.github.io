@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 找出旋转有序数列的中间值
+categories: [leetcode]
 ---
 
 #### QUESTION:

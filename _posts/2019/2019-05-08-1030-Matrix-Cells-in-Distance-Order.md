@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1030. Matrix Cells in Distance Order
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 108.Convert Sorted Array to Binary Search Tree
+categories: [leetcode]
 ---
 
 #### QUESTION:

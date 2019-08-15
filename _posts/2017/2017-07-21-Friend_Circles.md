@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 547. Friend Circles
+categories: [leetcode]
 ---
 
 #### QUESTION:

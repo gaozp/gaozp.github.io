@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 908. Smallest Range I
+categories: [leetcode]
 ---
 
 #### QUESTION:

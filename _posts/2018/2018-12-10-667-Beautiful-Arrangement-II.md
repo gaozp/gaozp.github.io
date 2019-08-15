@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 667. Beautiful Arrangement II
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 917. Reverse Only Letters
+categories: [leetcode]
 ---
 
 #### QUESTION:

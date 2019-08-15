@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 459. Repeated Substring Pattern
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 704. Binary Search
+categories: [leetcode]
 ---
 
 #### QUESTION:

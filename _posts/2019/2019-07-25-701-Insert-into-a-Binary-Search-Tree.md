@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 701. Insert into a Binary Search Tree
+categories: [leetcode]
 ---
 #### QUESTION:
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 442. Find All Duplicates in an Array
+categories: [leetcode]
 ---
 
 #### QUESTION:

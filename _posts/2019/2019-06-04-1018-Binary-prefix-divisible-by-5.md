@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1018. Binary Prefix Divisible By 5
+categories: [leetcode]
 ---
 
 #### QUESTION:

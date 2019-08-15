@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 985. Sum of Even Numbers After Queries
+categories: [leetcode]
 ---
 
 #### QUESTION:

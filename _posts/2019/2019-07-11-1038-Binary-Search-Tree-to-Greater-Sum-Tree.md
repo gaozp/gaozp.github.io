@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 1038. Binary Search Tree to Greater Sum Tree
+categories: [leetcode]
 ---
 #### QUESTION:
 Given the root of a binary search tree with distinct values, modify it so that every node has a new value equal to the sum of the values of the original tree that are greater than or equal to node.val.

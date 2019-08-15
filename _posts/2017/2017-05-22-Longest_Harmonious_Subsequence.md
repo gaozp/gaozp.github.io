@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 594. Longest Harmonious Subsequence
+categories: [leetcode]
 ---
 
 #### QUESTION:

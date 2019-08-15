@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 894. All Possible Full Binary Trees
+categories: [leetcode]
 ---
 #### QUESTION:
 A full binary tree is a binary tree where each node has exactly 0 or 2 children.

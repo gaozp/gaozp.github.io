@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 796. Rotate String
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 70. Climbing Stairs
+categories: [leetcode]
 ---
 
 #### QUESTION:

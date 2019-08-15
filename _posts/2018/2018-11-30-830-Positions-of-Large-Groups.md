@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 830. Positions of Large Groups
+categories: [leetcode]
 ---
 
 #### QUESTION:

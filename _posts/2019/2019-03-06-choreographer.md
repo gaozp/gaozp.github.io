@@ -1,6 +1,7 @@
 ---
 layout: post
 title: choreographer(一)
+categories: [tech]
 ---
 
 在viewrootimpl中进行的初始化。

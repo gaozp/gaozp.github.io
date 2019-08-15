@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 804. Unique Morse Code Words
+categories: [leetcode]
 ---
 
 #### QUESTION:

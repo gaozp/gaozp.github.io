@@ -1,6 +1,7 @@
 ---
 layout: post
 title: app compaction 源码分析（framework层）
+categories: [tech]
 ---
 ### 前言：
 app compaction是AndroidQ上的新功能，旨在将后台应用也就是adj非前台的，进行内存压缩，可以将1.8G内存的应用降到700兆，这明显的提高了内存的使用效率，但是就是不知道压缩内存和解压缩是否会造成效率的丢失。

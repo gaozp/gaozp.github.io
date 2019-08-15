@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 226. Invert Binary Tree
+categories: [leetcode]
 ---
 
 ####QUESTION:

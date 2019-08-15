@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 9. Palindrome Number
+categories: [leetcode]
 ---
 
 #### QUESTION:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 204. Count Primes
+categories: [leetcode]
 ---
 
 #### QUESTION:

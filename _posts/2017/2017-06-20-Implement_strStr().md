@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 28. Implement strStr()
+categories: [leetcode]
 ---
 
 #### QUESTION:

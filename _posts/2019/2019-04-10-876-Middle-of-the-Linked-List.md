@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 876. Middle of the Linked List
+categories: [leetcode]
 ---
 
 #### QUESTION:

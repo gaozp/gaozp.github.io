@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 8.String to Integer (atoi)
+categories: [leetcode]
 ---
 
 #### QUESTION:
