@@ -78,10 +78,22 @@
 
 <div id="container"></div>
 <!-- gitment 服务器proxy配置，需要更新 -->>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <!--  -->
 <script>
+var gitalk = new Gitalk({
+  clientID: 'e8a0dc56911a9b44b385',
+  clientSecret: '519e2c4de60dfd3188fc47e8a95b474b949b1cec',
+  repo: 'comments',
+  owner: 'gaozp',
+  admin: ['gaozp'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+gitalk.render('container')
+</script>
+<!-- <script>
 var gitment = new Gitment({
         id: '{{ page.date }}',
         owner: 'gaozp',
@@ -92,7 +104,7 @@ var gitment = new Gitment({
          },
 })
 gitment.render('container')
-</script>
+</script> -->
 <!--   <hr>
   <div class="eof">EOF</div>
   <hr> -->
