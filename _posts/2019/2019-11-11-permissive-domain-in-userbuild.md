@@ -1,6 +1,6 @@
 ---
 layout: post
-title: permissive domain not allowed in user builds
+title: permissive domain
 categories: [tech]
 ---
 #### 起因：
