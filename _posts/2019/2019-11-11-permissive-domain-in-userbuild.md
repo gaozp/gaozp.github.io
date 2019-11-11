@@ -1,5 +1,5 @@
 ---
-layout: _post
+layout: post
 title: permissive domain not allowed in user builds
 categories: [tech]
 ---
