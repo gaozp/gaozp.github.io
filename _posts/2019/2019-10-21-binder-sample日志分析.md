@@ -13,7 +13,8 @@ categories: [tech]
 ```
 05-15 12:47:06.672 10562 20858 20858 I binder_sample: [android.app.IActivityManager,13,940,com.starbucks.cn,100]
 ```
-参数意义：  
+参数意义： 
+ 
 |参数|例子|意义|备注|
 |-|-|-|-|
 |descriptor|android.app.IActivityManager|表示被卡住的binder调用对应的interface接口||

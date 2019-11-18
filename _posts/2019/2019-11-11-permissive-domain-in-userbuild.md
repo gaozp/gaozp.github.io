@@ -8,9 +8,9 @@ categories: [tech]
 ```
 ERROR: permissive domains not allowed in user builds" 1>&2;
 ```
-**起因：**在进一笔sepolicy代码的时候，报出的build break,从log也能很明显的看出，有一个domain，因为添加了permissive关键字而在user版本上导致的编译错误。  
-**思索：**为什么要在user版本上禁止使用permissive标签，在翻了资料后发现为了开发和debug的需要，加上permissive关键字后，可以将该domain的一些denied log打印出来，这样就方便了一次将所有的权限添加。这样做的方式了避免了那些开机启动的应用程序没有权限，有时候log太快被冲掉的问题。而且这个好处也避免了让整台机器都处于permissive的非安全状态。
-**使用：**  
+**起因**:在进一笔sepolicy代码的时候，报出的build break,从log也能很明显的看出，有一个domain，因为添加了permissive关键字而在user版本上导致的编译错误。  
+**思索**:为什么要在user版本上禁止使用permissive标签，在翻了资料后发现为了开发和debug的需要，加上permissive关键字后，可以将该domain的一些denied log打印出来，这样就方便了一次将所有的权限添加。这样做的方式了避免了那些开机启动的应用程序没有权限，有时候log太快被冲掉的问题。而且这个好处也避免了让整台机器都处于permissive的非安全状态。
+**使用**:  
 1. 在te文件中添加
 ```
 permissive myapp_t;
@@ -99,7 +99,7 @@ static struct {
 }
 ```
 所以2处调用的就是permissive_func
-```C
+```c
 // system/sepolicy/tools/sepolicy-analyze/perm.c
 static int list_permissive(policydb_t * policydb)
 {
