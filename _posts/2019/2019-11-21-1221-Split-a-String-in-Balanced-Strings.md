@@ -40,7 +40,7 @@ Constraints:
 s[i] = 'L' or 'R'
 #### EXPLANATION:
 easy的题目，看到这种配对的，可以直接考虑采用stack的数据结构。  
-在配对的时候，出栈一个，然后查看stack的size，如果是0，则说明已经配对完成。
+在配对的时候，出栈一个，然后查看stack的size，如果是0，则说明已经配对完成，需要将result++；
 #### SOLUTION:
 ```java
 class Solution {
