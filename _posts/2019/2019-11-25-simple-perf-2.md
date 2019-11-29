@@ -16,6 +16,7 @@ categories: [tech]
 因为发行版本的debuggable已经被设置成了false在Androidmanifest中，同时jnicheck也已经被关闭了，c/c++代码优化也已经打开。所以simpleperf只能在以下的情况下剖析发行版本的应用：
 a.如果你手机是root，那么你可以剖析任何应用
 b.如果你在大于O的版本上，可以使用wrap.sh来进行
+
 ```
 step1:将debuggable=true设置在AndroidManifes.xml
 中
@@ -55,6 +56,7 @@ task createWrapShLibDir
 4. 如果你想剖析一个java代码
 #### 记录和剖析数据
 我们可以使用app-profiler.py来进行数据的手机
+
 ```
 # Cd to the directory of simpleperf scripts. Record perf.data.
 # -p option selects the profiled app using its package name.
