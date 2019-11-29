@@ -8,6 +8,7 @@ categories: [tech]
 1. 准备一个安卓应用
 2. 记录剖析数据
 3. 报告剖析数据
+
 #### 1.准备一个安卓应用
 1. 如果你想剖析一个debug版本的应用
 只要manifest中设置了 android::debuggable="true"，那么就可以，不需要其他的操作。
@@ -153,4 +154,4 @@ $ python app_profiler.py -p com.example.simpleperf.simpleperfexamplewithnative
 # 3. Start the app manually on the device.
 ```
 #### 手动去解析数据
-我们也可以自己去写一些python脚本去解析收集到的数据。可以使用 simpleperf_report_lib.py。report_sample.py和report_html.py都是基于这个python脚本去做的。
+我们也可以自己去写一些python脚本去解析收集到的数据。可以使用 simpleperf_report_lib.py。report_sample.py和report_html
