@@ -45,7 +45,9 @@ Each node's value is either 0 or 1.
 #### EXPLANATION:
 1. 用一个string来保存二进制
 2. 转换成十进制数字  
+
 在查看了最佳答案后发现，其实很关键的一个条件是，每个点都是0或者是1.那么其实就完全可以使用位运算的方式来获取到值。
+
 #### SOLUTION:
 ```java
 /**
