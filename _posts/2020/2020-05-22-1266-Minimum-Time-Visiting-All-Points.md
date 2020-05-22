@@ -43,6 +43,7 @@ points[i].length == 2
 2. 获取到i点和i-1的点，两者x和y的最大的delta
 3. 累加到result中
 4. 返回结果
+
 #### SOLUTION:
 ```java
 class Solution {
