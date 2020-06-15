@@ -17,7 +17,7 @@ Output: 200
 Explanation: 
 The graph looks like this:
 ```
-![https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png](img) 
+![img](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png) 
 
 The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marked red in the picture.
 **Example 2:**
@@ -29,7 +29,7 @@ Output: 500
 Explanation: 
 The graph looks like this:
 ```
-![https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png](img) 
+![img](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/02/16/995.png) 
 
 The cheapest price from city 0 to city 2 with at most 0 stop costs 500, as marked blue in the picture.
  
