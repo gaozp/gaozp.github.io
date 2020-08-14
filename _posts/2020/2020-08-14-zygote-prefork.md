@@ -11,7 +11,7 @@ categories: [tech]
 ### 流程
 首先先来一个流程图来概览一下，本文基于Android Q。
 
-![img](https://gaozhipeng.me/img/zygote-prefork.png)
+![img](https://gaozhipeng.me/img/zygote-prefork.jpg)
 简述一下就是：  
 1. system_server 向 usap_pool_primary的socket发送信息。
 2. zygote fork了N个进程监听 usap_pool_primary的socket。
@@ -184,10 +184,12 @@ categories: [tech]
 1. processList在启动activity的时候，使用了独特的flag
 2. 启动之前检查一下，zygote是否已经完成了线程池的初始化
 3. 发送参数给usap_pool_primary的socket
+
 #### zygote逻辑
 zygote的逻辑简述：  
 1. fork出对应的进程，并且进行标记
 2. 维护线程数量
+
 应用启动流程就不再赘述，此处摘录一下zygoteinit部分代码
 ```JAVA
 // frameworks/base/core/java/com/android/internal/os/ZygoteInit.java
