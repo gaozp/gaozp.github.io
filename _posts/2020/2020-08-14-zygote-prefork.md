@@ -11,7 +11,7 @@ categories: [tech]
 ### 流程
 首先先来一个流程图来概览一下，本文基于Android Q。
 
-![]((https://gaozhipeng.me/img/zygote-prefork.png))
+![img](https://gaozhipeng.me/img/zygote-prefork.png)
 简述一下就是：  
 1. system_server 向 usap_pool_primary的socket发送信息。
 2. zygote fork了N个进程监听 usap_pool_primary的socket。
