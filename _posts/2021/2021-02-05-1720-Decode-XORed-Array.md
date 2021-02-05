@@ -14,29 +14,30 @@ Return the original array arr. It can be proved that the answer exists and is un
 
  
 
-Example 1:
-
+__Example 1:__
+```
 Input: encoded = [1,2,3], first = 1
 Output: [1,0,2,1]
 Explanation: If arr = [1,0,2,1], then first = 1 and encoded = [1 XOR 0, 0 XOR 2, 2 XOR 1] = [1,2,3]
-Example 2:
-
+```
+__Example 2:__
+```
 Input: encoded = [6,2,7,3], first = 4
 Output: [4,2,0,7,4]
- 
+ ```
 
-Constraints:
-
+__Constraints:__
+```
 2 <= n <= 104
 encoded.length == n - 1
 0 <= encoded[i] <= 105
 0 <= first <= 105
+```
 #### EXPLANATION:
-这道题目其实是一个算术题. 只要知道一个规律就可以了:  
-__x xor a = b__
-__b xor a = x__
+这道题目其实是一个算术题. 只要知道一个规律就可以了:    
+__x xor a = b__  
+__b xor a = x__  
 既一个数,连续异或两次同一个数,结果还是自己. 通过这个规律,我们就可以反向推出最终的结果.
-
 #### SOLUTION:
 ```java
 class Solution {
