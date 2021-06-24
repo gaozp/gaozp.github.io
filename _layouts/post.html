@@ -38,13 +38,15 @@
   <meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
+
   <!-- code prettify-->
-  <script type='text/javascript'>
+  <!-- <script type='text/javascript'>
     $(document).ready(function(){ 
         $("pre,code").addClass("prettyprint linenums");
         prettyPrint();
     });
-  </script> 
+  </script>  -->
+  
   <link href="/style/code_prettify/prettify.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="/style/code_prettify/prettify.js"></script> 
   <!-- add ofr google ads -->
@@ -67,11 +69,6 @@
   <div class="hidden" itemprop="author">Gaozhipeng</div>
   <div class="hidden" itemprop="description">{{ page.description }}</div>
 
-  <!--
-  <div class="info">
-      <i>Written {{ page.date | date:"%Y-%m-%d"}}</i>
-  </div>
--->
 
   <div class="content {{ page.categories }}_content_css" itemprop="articleBody">
     {{ content }}
@@ -94,52 +91,9 @@ var gitalk = new Gitalk({
 })
 gitalk.render('container')
 </script>
-<!-- <script>
-var gitment = new Gitment({
-        id: '{{ page.date }}',
-        owner: 'gaozp',
-        repo: 'comments',
-        oauth: {
-            client_id: 'e8a0dc56911a9b44b385',
-            client_secret: '519e2c4de60dfd3188fc47e8a95b474b949b1cec',
-         },
-})
-gitment.render('container')
-</script> -->
-<!--   <hr>
-  <div class="eof">EOF</div>
-  <hr> -->
 
-<!--   <div class="forb">
-  {% for tag in page.tags %}
-  <a href="/tags/#{{ tag }}">#{{ tag }}</a>
-  {% endfor %}
-  </div> -->
-
-<!--   <div class="suggest">
-    {% if page.previous %}
-        <a href="{{page.previous.url}}" class="pre">&lt; {{page.previous.title}}</a>
-    {% endif %}
-    
-    {% if page.next %}
-        <a href="{{page.next.url}}" class="next">{{page.next.title}} &gt;</a>
-    {% endif %}
-    </div> -->
 </div>
 </article>
-
-<!--
-<div class="comments {{ page.categories }}_comments_css">
-<div id="disqus_container"> 
-    {% if page.not_comment %}
-    <span class="comment">该文章已关闭评论。</span>
-    {% else %}
-    <a href="#" class="comment" onclick="return false;">点击评论或查看评论。</a>
-    {% endif %}    
-    <div id="disqus_thread"></div>
-</div>
-</div>
--->
 
 </div>
 {% include footer.html %}
