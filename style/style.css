@@ -301,6 +301,7 @@ pre {
 }
 
 pre code {
+  line-height: 1.8em;
   border: none;
   box-shadow: none;
   margin: 0px;
