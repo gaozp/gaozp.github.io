@@ -15,3 +15,5 @@ echo "" >> $time.md
 echo "#### SOLUTION:">> $time.md
 echo "\`\`\`java" >> $time.md
 echo "\`\`\`" >> $time.md
+
+code . 
