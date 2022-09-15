@@ -69,7 +69,7 @@ class CombinationIterator {
                     result.append(tmpResult)
                 }
             }
-            result.sorted()
+            result = result.sorted()
         }
         
         func next() -> String {
