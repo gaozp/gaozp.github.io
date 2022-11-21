@@ -15,4 +15,5 @@ iOS mobile App Developer.
 __Github__:  [https://github.com/gaozp](https://github.com/gaozp)  
 __Mail__:    ihsan.gaozp@gmail.com  
 __OnlineBook__: [https://gaozhipeng.me/book](https://gaozhipeng.me/book)  
-__微信公众号__: 酱油的世界
+__微信公众号__: 酱油的世界  
+![](http://gaozhipeng.me/img/about/wecom_qr.jpeg)
