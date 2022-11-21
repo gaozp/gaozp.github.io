@@ -9,5 +9,6 @@ Android moblie App && framework Developer.
 __Github__:  https://github.com/gaozp  
 __Mail__:    ihsan.gaozp@gmail.com  
 __OnlineBook__: https://gaozhipeng.me/book
+__微信公众号__: 酱油的世界
 
 
