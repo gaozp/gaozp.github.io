@@ -3,7 +3,7 @@ layout:     page
 title:      关于
 description: 关于我
 ---
-Android moblie App && framework Developer.
+Android moblie App && framework Developer.  
 iOS mobile App Developer.
 
 #### WORK:
