@@ -41,7 +41,32 @@ Some of the digits might be replaced with '?' and need to be replaced with digit
 ```
 #### EXPLANATION:
 
+easy的题目:  
+(??:mm) -> 24种情况  
+(?h:mm) -> 如果h是小于4, 那么有012三种情况, 否则就是2  
+(h?:mm) -> 如果h是2, 那么?就只有0,1,2,3这四种情况, 否则就是0-9都可以  
+(hh:mm) -> 这种只有1的情况了  
+分钟数就比较简单了.  
+
 #### SOLUTION:
 ```swift
+class Solution {
+    func countTime(_ time: String) -> Int {
+        let array = Array(time)
+        let h1 = array[0], h2 = array[1], m1 = array[3], m2 = array[4]
 
+        let pattern: Int = {
+            switch (h1, h2) {
+            case ("?", "?"): return 24
+            case ("?",   _): return (Int(String(h2))! < 4) ? 3 : 2
+            case (  _, "?"): return (h1 == "2" ? 4 : 10)
+            case (  _,   _): return 1
+            }
+        }()
+
+        return pattern
+             * (m1 == "?" ? 6 : 1)
+             * (m2 == "?" ? 10 : 1)
+    }
+}
 ```
